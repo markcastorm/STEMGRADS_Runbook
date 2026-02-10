@@ -1,0 +1,56 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environments
+venv/
+.venv/
+env/
+.env/
+
+# IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Logs
+logs/
+
+# Downloads (raw files from UNESCO, not needed in version control)
+downloads/
+
+# Output files (generated on each run)
+output/
+
+# Chrome driver / browser profiles
+chromedriver.exe
+chromedriver
+*.crdownload
+
+# Temporary and system files
+*.tmp
+*.bak
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# Large reference/project files
+project_information/*.docx
+project_information/*.pdf
+project_information/*.xlsx
+project_information/*.xls
+project_information/*.zip
+project_information/*.png
+
+# Master data — keep this in version control (it is the accumulation of all runs)
+# To exclude it instead, uncomment the line below:
+# Master Data/

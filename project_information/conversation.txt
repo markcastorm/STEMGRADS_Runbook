@@ -1,0 +1,601 @@
+STEMGRADS Scraper Navigation Steps
+Step 1: Visit Homepage
+URL: http://data.uis.unesco.org/
+Wait for page to load
+Step 2: Click "Browse data"
+Click the "Browse data" link in the top navigation
+Goes to: /browser
+Step 3: Click "Education" category
+On the browser page, click "Education" to expand it
+Then click "Other Policy Relevant Indicators - Education"
+Step 4: Click "Graduates" in left sidebar
+In the left sidebar, click "Graduates"
+OR search for: "Percentage of graduates by field of education"
+Step 5: Expand "Distribution of graduates by field of study"
+Click to expand this section (shows 13 results)
+Step 6: Select the STEM indicator
+Find and click: "Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%)"
+You'll see "Indicator added to the selection"
+Step 7: Click "View data"
+After indicator is selected, click "View data" link
+Step 8: Set Time Range
+Expand "Time range" section in left sidebar
+Drag slider to full range (min to max years)
+Step 9: Download CSV
+Click "Download filtered data" button (bottom right)
+Select "CSV" format
+Click "Download"
+Step 10: Process downloaded file
+CSV has columns: indicatorId, geoUnit, year, value, qualifier, magnitude
+Parse and update master data
+The current scraper is missing most of these steps. Want me to rewrite it to follow this exact flow?
+
+next in the search bar   (<div class="MuiBox-root mui-style-79elbk"><div style="line-height: 0;"><div class="MuiFormControl-root MuiTextField-root mui-style-1c3plu3"><div class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-sizeSmall MuiInputBase-adornedStart mui-style-1jd588y"><div class="MuiInputAdornment-root MuiInputAdornment-positionStart MuiInputAdornment-outlined MuiInputAdornment-sizeSmall mui-style-1f6kg7i"><span class="notranslate" aria-hidden="true">&ZeroWidthSpace;</span><div class="MuiBox-root mui-style-vodhhx" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16"><path fill="currentColor" fill-rule="evenodd" d="M6.5 0a6.5 6.5 0 1 0 3.988 11.633L14.856 16 16 14.855l-4.367-4.367A6.5 6.5 0 0 0 6.5 0m0 1.625a4.875 4.875 0 1 1 0 9.75 4.875 4.875 0 0 1 0-9.75" clip-rule="evenodd"></path></svg></div></div><input aria-invalid="false" autocomplete="off" id="framework-indicator-search-box" placeholder="Search" type="text" aria-autocomplete="list" aria-expanded="false" autocapitalize="none" spellcheck="false" role="combobox" class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputSizeSmall MuiInputBase-inputAdornedStart mui-style-1kscayg" value=""><fieldset aria-hidden="true" class="MuiOutlinedInput-notchedOutline mui-style-vuosl5"><legend class="mui-style-w4cd9x"><span class="notranslate" aria-hidden="true">&ZeroWidthSpace;</span></legend></fieldset></div></div></div></div>)   we are supposed to seach this ( Percentage of graduates by field of education (tertiary education))  type that into the search bar then you will see resulta 
+like this (<ul role="listbox" id="framework-indicator-search-box-listbox" aria-labelledby="framework-indicator-search-box-label" class="mui-style-eggxu7" style="padding-bottom: 32px;"><div class="group-search"><li class="mui-style-1nv7nkt-autocompleteResult" tabindex="-1" role="option" id="framework-indicator-search-box-option-0" data-option-index="0" aria-disabled="false" aria-selected="false"><span class="mui-style-1wfbxsw-icon mui-style-4-icon-ref"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16"><path fill="currentColor" fill-rule="evenodd" d="M6.5 0a6.5 6.5 0 1 0 3.988 11.633L14.856 16 16 14.855l-4.367-4.367A6.5 6.5 0 0 0 6.5 0m0 1.625a4.875 4.875 0 1 1 0 9.75 4.875 4.875 0 0 1 0-9.75" clip-rule="evenodd"></path></svg></span><div class="MuiTypography-root MuiTypography-body3 mui-style-1e04mbu-title">See all 1 results</div></li></div><div class="group-folder"><div class="MuiTypography-root MuiTypography-metaBold mui-style-3a103q">Folder</div><li class="mui-style-1nv7nkt-autocompleteResult Mui-focused" tabindex="-1" role="option" id="framework-indicator-search-box-option-1" data-option-index="1" aria-disabled="false" aria-selected="false"><span class="mui-style-1wfbxsw-icon mui-style-4-icon-ref"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16"><path fill="currentColor" fill-rule="evenodd" d="M10 4a2 2 0 1 0 0-4 2 2 0 0 0 0 4m1.74 11.149.26-.95c-.649.273-1.965.485-2.522.084-.565-.406-.2-1.773.002-2.394l.974-3.07c.169-.5.249-1.222.249-1.635C10.703 5.753 9.457 5 7.76 5c-1.13 0-2.45.463-3.5.844L4 6.794c.471-.158.992-.307 1.462-.307.964 0 1.319.222 1.319 1.055 0 .483-.17 1.093-.31 1.562-.16.509-.307.957-.439 1.358-.51 1.556-.787 2.403-.787 3.347 0 .633.263 1.155.789 1.566 1.624 1.274 4.347.272 5.457-.136.095-.035.179-.066.249-.09" clip-rule="evenodd"></path></svg></span><div class="MuiTypography-root MuiTypography-body3 mui-style-1u8kbm7-title"><span><b>Graduates</b></span></div><span class="MuiTypography-root MuiTypography-caption mui-style-1wb2c3t-description"><span><b>Percentage</b> <b>of</b>&nbsp;<b>graduates</b>&nbsp;<b>by</b> <b>field</b> of <b>education</b> (<b>terti...</b></span></span></li></div></ul>)
+(<div class="group-folder"><div class="MuiTypography-root MuiTypography-metaBold mui-style-3a103q">Folder</div><li class="mui-style-1nv7nkt-autocompleteResult Mui-focused" tabindex="-1" role="option" id="framework-indicator-search-box-option-1" data-option-index="1" aria-disabled="false" aria-selected="false"><span class="mui-style-1wfbxsw-icon mui-style-4-icon-ref"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16"><path fill="currentColor" fill-rule="evenodd" d="M10 4a2 2 0 1 0 0-4 2 2 0 0 0 0 4m1.74 11.149.26-.95c-.649.273-1.965.485-2.522.084-.565-.406-.2-1.773.002-2.394l.974-3.07c.169-.5.249-1.222.249-1.635C10.703 5.753 9.457 5 7.76 5c-1.13 0-2.45.463-3.5.844L4 6.794c.471-.158.992-.307 1.462-.307.964 0 1.319.222 1.319 1.055 0 .483-.17 1.093-.31 1.562-.16.509-.307.957-.439 1.358-.51 1.556-.787 2.403-.787 3.347 0 .633.263 1.155.789 1.566 1.624 1.274 4.347.272 5.457-.136.095-.035.179-.066.249-.09" clip-rule="evenodd"></path></svg></span><div class="MuiTypography-root MuiTypography-body3 mui-style-1u8kbm7-title"><span><b>Graduates</b></span></div><span class="MuiTypography-root MuiTypography-caption mui-style-1wb2c3t-description"><span><b>Percentage</b> <b>of</b>&nbsp;<b>graduates</b>&nbsp;<b>by</b> <b>field</b> of <b>education</b> (<b>terti...</b></span></span></li></div>) the search result will bring folder calesd Graduates click on that link it will lead here (project_information/image4.png) 
+(<main class="mui-style-repir6-centerPanel"><h1 style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;">Browse Indicators</h1><div class="MuiBox-root mui-style-0"><nav class="MuiTypography-root MuiTypography-body1 MuiBreadcrumbs-root mui-style-18lf2h7" aria-label="breadcrumbs"><ol class="MuiBreadcrumbs-ol mui-style-51eq8m"><li class="MuiBreadcrumbs-li"><a class="mui-style-1dee53h-navSelect" href="/browser/EDUCATION/UIS-EducationOPRI"><div class="MuiTypography-root MuiTypography-body3 mui-style-z3mezr">Other Policy Relevant Indicators - Education</div></a></li><li aria-hidden="true" class="MuiBreadcrumbs-separator mui-style-1nd5pgh">/</li><li class="MuiBreadcrumbs-li"><button class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary mui-style-6he7g8-navSelect" tabindex="0" type="button"><div class="MuiTypography-root MuiTypography-body3 mui-style-z3mezr">Graduates</div><svg class="MuiSvgIcon-root MuiSvgIcon-colorPrimary MuiSvgIcon-fontSizeMedium mui-style-1ba5vpw" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="ArrowRightIcon"><path d="m10 17 5-5-5-5z"></path></svg></button></li></ol></nav><div class="MuiBox-root mui-style-1u72um6"><div class="MuiBox-root mui-style-79elbk"><div style="line-height: 0;"><div class="MuiFormControl-root MuiTextField-root mui-style-1c3plu3"><div class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-sizeSmall MuiInputBase-adornedStart MuiInputBase-adornedEnd mui-style-1thtqh9"><div class="MuiInputAdornment-root MuiInputAdornment-positionStart MuiInputAdornment-outlined MuiInputAdornment-sizeSmall mui-style-1f6kg7i"><span class="notranslate" aria-hidden="true">&ZeroWidthSpace;</span><div class="MuiBox-root mui-style-vodhhx" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16"><path fill="currentColor" fill-rule="evenodd" d="M6.5 0a6.5 6.5 0 1 0 3.988 11.633L14.856 16 16 14.855l-4.367-4.367A6.5 6.5 0 0 0 6.5 0m0 1.625a4.875 4.875 0 1 1 0 9.75 4.875 4.875 0 0 1 0-9.75" clip-rule="evenodd"></path></svg></div></div><input aria-invalid="false" autocomplete="off" id="framework-indicator-search-box" placeholder="Search" type="text" aria-autocomplete="list" aria-expanded="false" autocapitalize="none" spellcheck="false" role="combobox" class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputSizeSmall MuiInputBase-inputAdornedStart MuiInputBase-inputAdornedEnd mui-style-1rbjrts" value=" Percentage of graduates by field of education (tertiary education)"><div class="MuiInputAdornment-root MuiInputAdornment-positionEnd MuiInputAdornment-outlined MuiInputAdornment-sizeSmall mui-style-yxqbup"><button class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall mui-style-1ehde82" tabindex="0" type="button" aria-label="Clear"><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeInherit mui-style-1l6e05h" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="ClearIcon"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg></button></div><fieldset aria-hidden="true" class="MuiOutlinedInput-notchedOutline mui-style-vuosl5"><legend class="mui-style-w4cd9x"><span class="notranslate" aria-hidden="true">&ZeroWidthSpace;</span></legend></fieldset></div></div></div></div><div class="MuiBox-root mui-style-1v26lrv">Searching in<button class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary mui-style-1fx9u91-button" tabindex="0" type="button" data-testid="search-options-button"><div class="MuiTypography-root MuiTypography-meta mui-style-itnssx">Other Policy Relevant Indicators - Education</div><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none" viewBox="0 0 16 16" transform="rotate(0)"><path fill="currentColor" fill-rule="evenodd" d="m15 5-7 7-7-7z" clip-rule="evenodd"></path></svg></button></div></div></div><div class="MuiBox-root mui-style-0"><div class="MuiStack-root mui-style-1ov46kg"><section class="MuiBox-root mui-style-0" data-debug="Target"><ul class="MuiStack-root mui-style-qyttno"><li class="MuiStack-root mui-style-jexox5-targetItem" data-debug="TargetItem"><div class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation0 mui-style-vq1fe2" style="--Paper-shadow: 0px 0px 0px 0px #00000000;"><div class="MuiBox-root mui-style-11ezxrp"><div class="MuiStack-root mui-style-aoei2w"><a class="MuiTypography-root MuiTypography-h5 mui-style-1yfp230" href="/browser/EDUCATION/UIS-EducationOPRI/graduates">Graduates</a></div><div class="MuiTypography-root MuiTypography-meta MuiTypography-gutterBottom mui-style-7qdg0s">Percentage of&nbsp;graduates&nbsp;by field of education (tertiary education)</div></div></div><div class="MuiStack-root mui-style-1vfv299"><div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiAccordion-root MuiAccordion-rounded MuiAccordion-gutters mui-style-1e4dv88-IndicatorGroupAccordion-accordion" style="--Paper-shadow: 1px 10px 70px -8px #00000021, 0px 10px 20px 0px #0000000d;"><h3 class="MuiAccordion-heading mui-style-wnfue5"><button class="MuiButtonBase-root MuiAccordionSummary-root MuiAccordionSummary-gutters mui-style-ef203r" tabindex="0" type="button" aria-expanded="false"><span class="MuiAccordionSummary-content MuiAccordionSummary-contentGutters mui-style-1b8uc0m"><div class="MuiBox-root mui-style-1ylmhc9"><h5 class="MuiTypography-root MuiTypography-h5 mui-style-w1h70t">Distribution of graduates by field of study</h5><div class="MuiChip-root MuiChip-filled MuiChip-sizeSmall MuiChip-colorDefault MuiChip-filledDefault mui-style-n4mq49"><span class="MuiChip-label MuiChip-labelSmall mui-style-4y436t">13 results</span></div></div></span><span class="MuiAccordionSummary-expandIconWrapper mui-style-f8wb7g"><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium mui-style-q7mezt" focusable="false" color="#0069b4" aria-hidden="true" viewBox="0 0 24 24" data-testid="ArrowDropDownIcon"><path d="m7 10 5 5 5-5z"></path></svg></span></button></h3><div class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-hidden mui-style-abqyn" style="min-height: 0px;"><div class="MuiCollapse-wrapper MuiCollapse-vertical mui-style-15830to"><div class="MuiCollapse-wrapperInner MuiCollapse-vertical mui-style-9vd5ud"><div role="region" class="MuiAccordion-region"><div class="MuiAccordionDetails-root mui-style-l9xe8y"></div></div></div></div></div></div><div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiAccordion-root MuiAccordion-rounded MuiAccordion-gutters mui-style-1e4dv88-IndicatorGroupAccordion-accordion" style="--Paper-shadow: 1px 10px 70px -8px #00000021, 0px 10px 20px 0px #0000000d;"><h3 class="MuiAccordion-heading mui-style-wnfue5"><button class="MuiButtonBase-root MuiAccordionSummary-root MuiAccordionSummary-gutters mui-style-ef203r" tabindex="0" type="button" aria-expanded="false"><span class="MuiAccordionSummary-content MuiAccordionSummary-contentGutters mui-style-1b8uc0m"><div class="MuiBox-root mui-style-1ylmhc9"><h5 class="MuiTypography-root MuiTypography-h5 mui-style-w1h70t">Distribution of graduates from STEM programmes who are female</h5><div class="MuiChip-root MuiChip-filled MuiChip-sizeSmall MuiChip-colorDefault MuiChip-filledDefault mui-style-n4mq49"><span class="MuiChip-label MuiChip-labelSmall mui-style-4y436t">1 result</span></div></div></span><span class="MuiAccordionSummary-expandIconWrapper mui-style-f8wb7g"><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium mui-style-q7mezt" focusable="false" color="#0069b4" aria-hidden="true" viewBox="0 0 24 24" data-testid="ArrowDropDownIcon"><path d="m7 10 5 5 5-5z"></path></svg></span></button></h3><div class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-hidden mui-style-abqyn" style="min-height: 0px;"><div class="MuiCollapse-wrapper MuiCollapse-vertical mui-style-15830to"><div class="MuiCollapse-wrapperInner MuiCollapse-vertical mui-style-9vd5ud"><div role="region" class="MuiAccordion-region"><div class="MuiAccordionDetails-root mui-style-l9xe8y"></div></div></div></div></div></div></div></li></ul></section></div></div></main>)  
+you can see below the graduates you get selections on drstributions (<ul class="MuiStack-root mui-style-qyttno"><li class="MuiStack-root mui-style-jexox5-targetItem" data-debug="TargetItem"><div class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation0 mui-style-vq1fe2" style="--Paper-shadow: 0px 0px 0px 0px #00000000;"><div class="MuiBox-root mui-style-11ezxrp"><div class="MuiStack-root mui-style-aoei2w"><a class="MuiTypography-root MuiTypography-h5 mui-style-1yfp230" href="/browser/EDUCATION/UIS-EducationOPRI/graduates">Graduates</a></div><div class="MuiTypography-root MuiTypography-meta MuiTypography-gutterBottom mui-style-7qdg0s">Percentage of&nbsp;graduates&nbsp;by field of education (tertiary education)</div></div></div><div class="MuiStack-root mui-style-1vfv299"><div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiAccordion-root MuiAccordion-rounded MuiAccordion-gutters mui-style-1e4dv88-IndicatorGroupAccordion-accordion" style="--Paper-shadow: 1px 10px 70px -8px #00000021, 0px 10px 20px 0px #0000000d;"><h3 class="MuiAccordion-heading mui-style-wnfue5"><button class="MuiButtonBase-root MuiAccordionSummary-root MuiAccordionSummary-gutters mui-style-ef203r" tabindex="0" type="button" aria-expanded="false"><span class="MuiAccordionSummary-content MuiAccordionSummary-contentGutters mui-style-1b8uc0m"><div class="MuiBox-root mui-style-1ylmhc9"><h5 class="MuiTypography-root MuiTypography-h5 mui-style-w1h70t">Distribution of graduates by field of study</h5><div class="MuiChip-root MuiChip-filled MuiChip-sizeSmall MuiChip-colorDefault MuiChip-filledDefault mui-style-n4mq49"><span class="MuiChip-label MuiChip-labelSmall mui-style-4y436t">13 results</span></div></div></span><span class="MuiAccordionSummary-expandIconWrapper mui-style-f8wb7g"><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium mui-style-q7mezt" focusable="false" color="#0069b4" aria-hidden="true" viewBox="0 0 24 24" data-testid="ArrowDropDownIcon"><path d="m7 10 5 5 5-5z"></path></svg></span></button></h3><div class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-hidden mui-style-abqyn" style="min-height: 0px;"><div class="MuiCollapse-wrapper MuiCollapse-vertical mui-style-15830to"><div class="MuiCollapse-wrapperInner MuiCollapse-vertical mui-style-9vd5ud"><div role="region" class="MuiAccordion-region"><div class="MuiAccordionDetails-root mui-style-l9xe8y"></div></div></div></div></div></div><div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiAccordion-root MuiAccordion-rounded MuiAccordion-gutters mui-style-1e4dv88-IndicatorGroupAccordion-accordion" style="--Paper-shadow: 1px 10px 70px -8px #00000021, 0px 10px 20px 0px #0000000d;"><h3 class="MuiAccordion-heading mui-style-wnfue5"><button class="MuiButtonBase-root MuiAccordionSummary-root MuiAccordionSummary-gutters mui-style-ef203r" tabindex="0" type="button" aria-expanded="false"><span class="MuiAccordionSummary-content MuiAccordionSummary-contentGutters mui-style-1b8uc0m"><div class="MuiBox-root mui-style-1ylmhc9"><h5 class="MuiTypography-root MuiTypography-h5 mui-style-w1h70t">Distribution of graduates from STEM programmes who are female</h5><div class="MuiChip-root MuiChip-filled MuiChip-sizeSmall MuiChip-colorDefault MuiChip-filledDefault mui-style-n4mq49"><span class="MuiChip-label MuiChip-labelSmall mui-style-4y436t">1 result</span></div></div></span><span class="MuiAccordionSummary-expandIconWrapper mui-style-f8wb7g"><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium mui-style-q7mezt" focusable="false" color="#0069b4" aria-hidden="true" viewBox="0 0 24 24" data-testid="ArrowDropDownIcon"><path d="m7 10 5 5 5-5z"></path></svg></span></button></h3><div class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-hidden mui-style-abqyn" style="min-height: 0px;"><div class="MuiCollapse-wrapper MuiCollapse-vertical mui-style-15830to"><div class="MuiCollapse-wrapperInner MuiCollapse-vertical mui-style-9vd5ud"><div role="region" class="MuiAccordion-region"><div class="MuiAccordionDetails-root mui-style-l9xe8y"></div></div></div></div></div></div></div></li></ul>)
+
+based on the runbook we click on the ( Distribution of tertiary graduates by field of study)(<h3 class="MuiAccordion-heading mui-style-wnfue5"><button class="MuiButtonBase-root MuiAccordionSummary-root MuiAccordionSummary-gutters mui-style-ef203r" tabindex="0" type="button" aria-expanded="false"><span class="MuiAccordionSummary-content MuiAccordionSummary-contentGutters mui-style-1b8uc0m"><div class="MuiBox-root mui-style-1ylmhc9"><h5 class="MuiTypography-root MuiTypography-h5 mui-style-w1h70t">Distribution of graduates by field of study</h5><div class="MuiChip-root MuiChip-filled MuiChip-sizeSmall MuiChip-colorDefault MuiChip-filledDefault mui-style-n4mq49"><span class="MuiChip-label MuiChip-labelSmall mui-style-4y436t">13 results</span></div></div></span><span class="MuiAccordionSummary-expandIconWrapper mui-style-f8wb7g"><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium mui-style-q7mezt" focusable="false" color="#0069b4" aria-hidden="true" viewBox="0 0 24 24" data-testid="ArrowDropDownIcon"><path d="m7 10 5 5 5-5z"></path></svg></span></button></h3>)
+which is a drop down it will open the dropdown (D:\Projects\SIMBA-RUNBOOKS\STEMGRADS_Runbook\project_information\image5.png) you can see it has listed alot of categories with a pagination element too (<main class="mui-style-repir6-centerPanel"><h1 style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;">Browse Indicators</h1><div class="MuiBox-root mui-style-0"><nav class="MuiTypography-root MuiTypography-body1 MuiBreadcrumbs-root mui-style-18lf2h7" aria-label="breadcrumbs"><ol class="MuiBreadcrumbs-ol mui-style-51eq8m"><li class="MuiBreadcrumbs-li"><a class="mui-style-1dee53h-navSelect" href="/browser/EDUCATION/UIS-EducationOPRI"><div class="MuiTypography-root MuiTypography-body3 mui-style-z3mezr">Other Policy Relevant Indicators - Education</div></a></li><li aria-hidden="true" class="MuiBreadcrumbs-separator mui-style-1nd5pgh">/</li><li class="MuiBreadcrumbs-li"><button class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary mui-style-6he7g8-navSelect" tabindex="0" type="button"><div class="MuiTypography-root MuiTypography-body3 mui-style-z3mezr">Graduates</div><svg class="MuiSvgIcon-root MuiSvgIcon-colorPrimary MuiSvgIcon-fontSizeMedium mui-style-1ba5vpw" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="ArrowRightIcon"><path d="m10 17 5-5-5-5z"></path></svg></button></li></ol></nav><div class="MuiBox-root mui-style-1u72um6"><div class="MuiBox-root mui-style-79elbk"><div style="line-height: 0;"><div class="MuiFormControl-root MuiTextField-root mui-style-1c3plu3"><div class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-sizeSmall MuiInputBase-adornedStart MuiInputBase-adornedEnd mui-style-1thtqh9"><div class="MuiInputAdornment-root MuiInputAdornment-positionStart MuiInputAdornment-outlined MuiInputAdornment-sizeSmall mui-style-1f6kg7i"><span class="notranslate" aria-hidden="true">&ZeroWidthSpace;</span><div class="MuiBox-root mui-style-vodhhx" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16"><path fill="currentColor" fill-rule="evenodd" d="M6.5 0a6.5 6.5 0 1 0 3.988 11.633L14.856 16 16 14.855l-4.367-4.367A6.5 6.5 0 0 0 6.5 0m0 1.625a4.875 4.875 0 1 1 0 9.75 4.875 4.875 0 0 1 0-9.75" clip-rule="evenodd"></path></svg></div></div><input aria-invalid="false" autocomplete="off" id="framework-indicator-search-box" placeholder="Search" type="text" aria-autocomplete="list" aria-expanded="false" autocapitalize="none" spellcheck="false" role="combobox" class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputSizeSmall MuiInputBase-inputAdornedStart MuiInputBase-inputAdornedEnd mui-style-1rbjrts" value=" Percentage of graduates by field of education (tertiary education)"><div class="MuiInputAdornment-root MuiInputAdornment-positionEnd MuiInputAdornment-outlined MuiInputAdornment-sizeSmall mui-style-yxqbup"><button class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall mui-style-1ehde82" tabindex="0" type="button" aria-label="Clear"><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeInherit mui-style-1l6e05h" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="ClearIcon"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg></button></div><fieldset aria-hidden="true" class="MuiOutlinedInput-notchedOutline mui-style-vuosl5"><legend class="mui-style-w4cd9x"><span class="notranslate" aria-hidden="true">&ZeroWidthSpace;</span></legend></fieldset></div></div></div></div><div class="MuiBox-root mui-style-1v26lrv">Searching in<button class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary mui-style-1fx9u91-button" tabindex="0" type="button" data-testid="search-options-button"><div class="MuiTypography-root MuiTypography-meta mui-style-itnssx">Other Policy Relevant Indicators - Education</div><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none" viewBox="0 0 16 16" transform="rotate(0)"><path fill="currentColor" fill-rule="evenodd" d="m15 5-7 7-7-7z" clip-rule="evenodd"></path></svg></button></div></div></div><div class="MuiBox-root mui-style-0"><div class="MuiStack-root mui-style-1ov46kg"><section class="MuiBox-root mui-style-0" data-debug="Target"><ul class="MuiStack-root mui-style-qyttno"><li class="MuiStack-root mui-style-jexox5-targetItem" data-debug="TargetItem"><div class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation0 mui-style-vq1fe2" style="--Paper-shadow: 0px 0px 0px 0px #00000000;"><div class="MuiBox-root mui-style-11ezxrp"><div class="MuiStack-root mui-style-aoei2w"><a class="MuiTypography-root MuiTypography-h5 mui-style-1yfp230" href="/browser/EDUCATION/UIS-EducationOPRI/graduates">Graduates</a></div><div class="MuiTypography-root MuiTypography-meta MuiTypography-gutterBottom mui-style-7qdg0s">Percentage of&nbsp;graduates&nbsp;by field of education (tertiary education)</div></div></div><div class="MuiStack-root mui-style-1vfv299"><div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiAccordion-root MuiAccordion-rounded Mui-expanded MuiAccordion-gutters mui-style-1e4dv88-IndicatorGroupAccordion-accordion" style="--Paper-shadow: 1px 10px 70px -8px #00000021, 0px 10px 20px 0px #0000000d;"><h3 class="MuiAccordion-heading mui-style-wnfue5"><button class="MuiButtonBase-root MuiAccordionSummary-root Mui-expanded MuiAccordionSummary-gutters mui-style-ef203r" tabindex="0" type="button" aria-expanded="true"><span class="MuiAccordionSummary-content Mui-expanded MuiAccordionSummary-contentGutters mui-style-1b8uc0m"><div class="MuiBox-root mui-style-1ylmhc9"><h5 class="MuiTypography-root MuiTypography-h5 mui-style-w1h70t">Distribution of graduates by field of study</h5><div class="MuiChip-root MuiChip-filled MuiChip-sizeSmall MuiChip-colorDefault MuiChip-filledDefault mui-style-n4mq49"><span class="MuiChip-label MuiChip-labelSmall mui-style-4y436t">13 results</span></div></div></span><span class="MuiAccordionSummary-expandIconWrapper Mui-expanded mui-style-f8wb7g"><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium mui-style-q7mezt" focusable="false" color="#0069b4" aria-hidden="true" viewBox="0 0 24 24" data-testid="ArrowDropDownIcon"><path d="m7 10 5 5 5-5z"></path></svg></span></button></h3><div class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-entered mui-style-1cbf1l2" style="min-height: 0px; height: auto; transition-duration: 425ms;"><div class="MuiCollapse-wrapper MuiCollapse-vertical mui-style-15830to"><div class="MuiCollapse-wrapperInner MuiCollapse-vertical mui-style-9vd5ud"><div role="region" class="MuiAccordion-region"><div class="MuiAccordionDetails-root mui-style-l9xe8y"><div class="MuiBox-root mui-style-0"><div class="MuiBox-root mui-style-t0051x"><label class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd mui-style-1agasdm-IndicatorGroupAccordion-formControlLabel"><span class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeSmall PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeSmall MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeSmall mui-style-khh4t8"><input class="PrivateSwitchBase-input mui-style-j8yymo" type="checkbox" data-indeterminate="false"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 18 18" font-size="small"><rect width="16" height="16" x="1" y="1" stroke="#DDD" stroke-width="2" rx="2"></rect></svg></span><span class="MuiTypography-root MuiTypography-caption MuiFormControlLabel-label mui-style-gjnlp7">Show 39 disaggregations</span></label><div class="mui-style-hzxwez-IndicatorGroupAccordion-facetFilters"><div class="MuiButtonBase-root MuiChip-root MuiChip-filled MuiChip-sizeSmall MuiChip-colorDefault MuiChip-clickable MuiChip-clickableColorDefault MuiChip-filledDefault mui-style-v02wsl-chip-chip-selectable" tabindex="0" role="button" title=""><div class="mui-style-1i0qwdi-root"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" fill="none" viewBox="0 0 16 16" class="metadataIcon" font-size="small"><path fill="currentColor" fill-rule="evenodd" d="M10 4a2 2 0 1 0 0-4 2 2 0 0 0 0 4m1.74 11.149.26-.95c-.649.273-1.965.485-2.522.084-.565-.406-.2-1.773.002-2.394l.974-3.07c.169-.5.249-1.222.249-1.635C10.703 5.753 9.457 5 7.76 5c-1.13 0-2.45.463-3.5.844L4 6.794c.471-.158.992-.307 1.462-.307.964 0 1.319.222 1.319 1.055 0 .483-.17 1.093-.31 1.562-.16.509-.307.957-.439 1.358-.51 1.556-.787 2.403-.787 3.347 0 .633.263 1.155.789 1.566 1.624 1.274 4.347.272 5.457-.136.095-.035.179-.066.249-.09" clip-rule="evenodd"></path></svg></div><span class="MuiChip-label MuiChip-labelSmall mui-style-4y436t">Fields of education </span><span class="MuiTouchRipple-root mui-style-4mb1j7"></span></div><div class="MuiButtonBase-root MuiChip-root MuiChip-filled MuiChip-sizeSmall MuiChip-colorDefault MuiChip-clickable MuiChip-clickableColorDefault MuiChip-filledDefault mui-style-8z4y8t-chip-chip-selectable-EduLvl" tabindex="0" role="button" title=""><span class="MuiChip-label MuiChip-labelSmall mui-style-4y436t">Education Level </span><span class="MuiTouchRipple-root mui-style-4mb1j7"></span></div></div></div><div class="mui-style-15-IndicatorGroupAccordion-indicatorRow-ref MuiBox-root mui-style-81bypp-IndicatorGroupAccordion-indicatorRow" role="listitem"><div class="MuiBox-root mui-style-ljlsjw-IndicatorGroupAccordion-result">
+<div class="MuiBox-root mui-style-i9gxme"><div class="MuiTypography-root MuiTypography-body3 mui-style-1vjzb77">Percentage of graduates from tertiary education graduating from Education programmes, both sexes (%)</div></div><button class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorPrimary cart-button mui-style-oo8eet-IndicatorGroupAccordion-indicatorRowCartButton" tabindex="0" type="button">Add<span class="MuiButton-icon MuiButton-endIcon MuiButton-iconSizeSmall mui-style-5yqlck"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="16" fill="none" viewBox="0 0 16 16" color="primary"><path fill="currentColor" fill-rule="evenodd" d="M9 0H7v7H0v2h7v7h2V9h7V7H9z" clip-rule="evenodd"></path></svg></span></button></div></div><div class="mui-style-15-IndicatorGroupAccordion-indicatorRow-ref MuiBox-root mui-style-81bypp-IndicatorGroupAccordion-indicatorRow" role="listitem"><div class="MuiBox-root mui-style-ljlsjw-IndicatorGroupAccordion-result"><div class="MuiBox-root mui-style-i9gxme"><div class="MuiTypography-root MuiTypography-body3 mui-style-1vjzb77">Percentage of graduates from tertiary education graduating from Arts and Humanities programmes, both sexes (%)</div><div class="MuiBox-root mui-style-115v0p0-root"><div class="MuiButtonBase-root MuiChip-root MuiChip-filled MuiChip-sizeSmall MuiChip-colorDefault MuiChip-clickable MuiChip-clickableColorDefault MuiChip-filledDefault mui-style-17arxri-chip-xsmall-EduLvl" tabindex="0" role="button" title="ISCED 5 to 8 - Tertiary education"><div class="mui-style-1i0qwdi-root"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" fill="none" viewBox="0 0 16 16" class="metadataIcon" font-size="small"><path fill="currentColor" fill-rule="evenodd" d="M10 4a2 2 0 1 0 0-4 2 2 0 0 0 0 4m1.74 11.149.26-.95c-.649.273-1.965.485-2.522.084-.565-.406-.2-1.773.002-2.394l.974-3.07c.169-.5.249-1.222.249-1.635C10.703 5.753 9.457 5 7.76 5c-1.13 0-2.45.463-3.5.844L4 6.794c.471-.158.992-.307 1.462-.307.964 0 1.319.222 1.319 1.055 0 .483-.17 1.093-.31 1.562-.16.509-.307.957-.439 1.358-.51 1.556-.787 2.403-.787 3.347 0 .633.263 1.155.789 1.566 1.624 1.274 4.347.272 5.457-.136.095-.035.179-.066.249-.09" clip-rule="evenodd"></path></svg></div><span class="MuiChip-label MuiChip-labelSmall mui-style-4y436t">ISCED 5 to 8 - Tertiary education</span></div><div class="MuiButtonBase-root MuiChip-root MuiChip-filled MuiChip-sizeSmall MuiChip-colorDefault MuiChip-clickable MuiChip-clickableColorDefault MuiChip-filledDefault mui-style-17hgrvp-chip-xsmall" tabindex="0" role="button" title="Arts and Humanities"><span class="MuiChip-label MuiChip-labelSmall mui-style-4y436t">Arts and Humanities</span><span class="MuiTouchRipple-root mui-style-4mb1j7"></span></div></div></div><button class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorPrimary cart-button mui-style-oo8eet-IndicatorGroupAccordion-indicatorRowCartButton" tabindex="0" type="button">Add<span class="MuiButton-icon MuiButton-endIcon MuiButton-iconSizeSmall mui-style-5yqlck"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="16" fill="none" viewBox="0 0 16 16" color="primary"><path fill="currentColor" fill-rule="evenodd" d="M9 0H7v7H0v2h7v7h2V9h7V7H9z" clip-rule="evenodd"></path></svg></span></button></div></div><div class="mui-style-15-IndicatorGroupAccordion-indicatorRow-ref MuiBox-root mui-style-81bypp-IndicatorGroupAccordion-indicatorRow" role="listitem"><div class="MuiBox-root mui-style-ljlsjw-IndicatorGroupAccordion-result"><div class="MuiBox-root mui-style-i9gxme"><div class="MuiTypography-root MuiTypography-body3 mui-style-1vjzb77">Percentage of graduates from tertiary education graduating from Social Sciences, Journalism and Information programmes, both sexes (%)</div><div class="MuiBox-root mui-style-115v0p0-root"><div class="MuiButtonBase-root MuiChip-root MuiChip-filled MuiChip-sizeSmall MuiChip-colorDefault MuiChip-clickable MuiChip-clickableColorDefault MuiChip-filledDefault mui-style-17arxri-chip-xsmall-EduLvl" tabindex="0" role="button" title="ISCED 5 to 8 - Tertiary education"><div class="mui-style-1i0qwdi-root"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" fill="none" viewBox="0 0 16 16" class="metadataIcon" font-size="small"><path fill="currentColor" fill-rule="evenodd" d="M10 4a2 2 0 1 0 0-4 2 2 0 0 0 0 4m1.74 11.149.26-.95c-.649.273-1.965.485-2.522.084-.565-.406-.2-1.773.002-2.394l.974-3.07c.169-.5.249-1.222.249-1.635C10.703 5.753 9.457 5 7.76 5c-1.13 0-2.45.463-3.5.844L4 6.794c.471-.158.992-.307 1.462-.307.964 0 1.319.222 1.319 1.055 0 .483-.17 1.093-.31 1.562-.16.509-.307.957-.439 1.358-.51 1.556-.787 2.403-.787 3.347 0 .633.263 1.155.789 1.566 1.624 1.274 4.347.272 5.457-.136.095-.035.179-.066.249-.09" clip-rule="evenodd"></path></svg></div><span class="MuiChip-label MuiChip-labelSmall mui-style-4y436t">ISCED 5 to 8 - Tertiary education</span><span class="MuiTouchRipple-root mui-style-4mb1j7"></span></div><div class="MuiButtonBase-root MuiChip-root MuiChip-filled MuiChip-sizeSmall MuiChip-colorDefault MuiChip-clickable MuiChip-clickableColorDefault MuiChip-filledDefault mui-style-17hgrvp-chip-xsmall" tabindex="0" role="button" title="Social Sciences, Journalism and Information"><span class="MuiChip-label MuiChip-labelSmall mui-style-4y436t">Social Sciences, Journalism and Information</span><span class="MuiTouchRipple-root mui-style-4mb1j7"></span></div></div></div><button class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorPrimary cart-button mui-style-oo8eet-IndicatorGroupAccordion-indicatorRowCartButton" tabindex="0" type="button">Add<span class="MuiButton-icon MuiButton-endIcon MuiButton-iconSizeSmall mui-style-5yqlck"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="16" fill="none" viewBox="0 0 16 16" color="primary"><path fill="currentColor" fill-rule="evenodd" d="M9 0H7v7H0v2h7v7h2V9h7V7H9z" clip-rule="evenodd"></path></svg></span></button></div></div><div class="mui-style-15-IndicatorGroupAccordion-indicatorRow-ref MuiBox-root mui-style-81bypp-IndicatorGroupAccordion-indicatorRow" role="listitem"><div class="MuiBox-root mui-style-ljlsjw-IndicatorGroupAccordion-result"><div class="MuiBox-root mui-style-i9gxme"><div class="MuiTypography-root MuiTypography-body3 mui-style-1vjzb77">Percentage of graduates from tertiary education graduating from Business, Administration and Law  programmes, both sexes (%)</div><div class="MuiBox-root mui-style-115v0p0-root"><div class="MuiButtonBase-root MuiChip-root MuiChip-filled MuiChip-sizeSmall MuiChip-colorDefault MuiChip-clickable MuiChip-clickableColorDefault MuiChip-filledDefault mui-style-17arxri-chip-xsmall-EduLvl" tabindex="0" role="button" title="ISCED 5 to 8 - Tertiary education"><div class="mui-style-1i0qwdi-root"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" fill="none" viewBox="0 0 16 16" class="metadataIcon" font-size="small"><path fill="currentColor" fill-rule="evenodd" d="M10 4a2 2 0 1 0 0-4 2 2 0 0 0 0 4m1.74 11.149.26-.95c-.649.273-1.965.485-2.522.084-.565-.406-.2-1.773.002-2.394l.974-3.07c.169-.5.249-1.222.249-1.635C10.703 5.753 9.457 5 7.76 5c-1.13 0-2.45.463-3.5.844L4 6.794c.471-.158.992-.307 1.462-.307.964 0 1.319.222 1.319 1.055 0 .483-.17 1.093-.31 1.562-.16.509-.307.957-.439 1.358-.51 1.556-.787 2.403-.787 3.347 0 .633.263 1.155.789 1.566 1.624 1.274 4.347.272 5.457-.136.095-.035.179-.066.249-.09" clip-rule="evenodd"></path></svg></div><span class="MuiChip-label MuiChip-labelSmall mui-style-4y436t">ISCED 5 to 8 - Tertiary education</span></div><div class="MuiButtonBase-root MuiChip-root MuiChip-filled MuiChip-sizeSmall MuiChip-colorDefault MuiChip-clickable MuiChip-clickableColorDefault MuiChip-filledDefault mui-style-17hgrvp-chip-xsmall" tabindex="0" role="button" title="Business, Administration and Law"><span class="MuiChip-label MuiChip-labelSmall mui-style-4y436t">Business, Administration and Law</span><span class="MuiTouchRipple-root mui-style-4mb1j7"></span></div></div></div><button class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorPrimary cart-button mui-style-oo8eet-IndicatorGroupAccordion-indicatorRowCartButton" tabindex="0" type="button">Add<span class="MuiButton-icon MuiButton-endIcon MuiButton-iconSizeSmall mui-style-5yqlck"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="16" fill="none" viewBox="0 0 16 16" color="primary"><path fill="currentColor" fill-rule="evenodd" d="M9 0H7v7H0v2h7v7h2V9h7V7H9z" clip-rule="evenodd"></path></svg></span></button></div></div><div class="mui-style-15-IndicatorGroupAccordion-indicatorRow-ref MuiBox-root mui-style-81bypp-IndicatorGroupAccordion-indicatorRow" role="listitem"><div class="MuiBox-root mui-style-ljlsjw-IndicatorGroupAccordion-result"><div class="MuiBox-root mui-style-i9gxme"><div class="MuiTypography-root MuiTypography-body3 mui-style-1vjzb77">Percentage of graduates from tertiary education graduating from Natural Sciences, Mathematics and Statistics programmes, both sexes (%)</div><div class="MuiBox-root mui-style-115v0p0-root"><div class="MuiButtonBase-root MuiChip-root MuiChip-filled MuiChip-sizeSmall MuiChip-colorDefault MuiChip-clickable MuiChip-clickableColorDefault MuiChip-filledDefault 
+mui-style-17arxri-chip-xsmall-EduLvl" tabindex="0" role="button" title="ISCED 5 to 8 - Tertiary education"><div class="mui-style-1i0qwdi-root"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" fill="none" viewBox="0 0 16 16" class="metadataIcon" font-size="small"><path fill="currentColor" fill-rule="evenodd" d="M10 4a2 2 0 1 0 0-4 2 2 0 0 0 0 4m1.74 11.149.26-.95c-.649.273-1.965.485-2.522.084-.565-.406-.2-1.773.002-2.394l.974-3.07c.169-.5.249-1.222.249-1.635C10.703 5.753 9.457 5 7.76 5c-1.13 0-2.45.463-3.5.844L4 6.794c.471-.158.992-.307 1.462-.307.964 0 1.319.222 1.319 1.055 0 .483-.17 1.093-.31 1.562-.16.509-.307.957-.439 1.358-.51 1.556-.787 2.403-.787 3.347 0 .633.263 1.155.789 1.566 1.624 1.274 4.347.272 5.457-.136.095-.035.179-.066.249-.09" clip-rule="evenodd"></path></svg></div><span class="MuiChip-label MuiChip-labelSmall mui-style-4y436t">ISCED 5 to 8 - Tertiary education</span></div><div class="MuiButtonBase-root MuiChip-root MuiChip-filled MuiChip-sizeSmall MuiChip-colorDefault MuiChip-clickable MuiChip-clickableColorDefault MuiChip-filledDefault mui-style-17hgrvp-chip-xsmall" tabindex="0" role="button" title="Natural Sciences, Mathematics and Statistics"><span class="MuiChip-label MuiChip-labelSmall mui-style-4y436t">Natural Sciences, Mathematics and Statistics</span></div></div></div><button class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorPrimary cart-button mui-style-oo8eet-IndicatorGroupAccordion-indicatorRowCartButton" tabindex="0" type="button">Add<span class="MuiButton-icon MuiButton-endIcon MuiButton-iconSizeSmall mui-style-5yqlck"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="16" fill="none" viewBox="0 0 16 16" color="primary"><path fill="currentColor" fill-rule="evenodd" d="M9 0H7v7H0v2h7v7h2V9h7V7H9z" clip-rule="evenodd"></path></svg></span></button></div></div><div class="mui-style-15-IndicatorGroupAccordion-indicatorRow-ref MuiBox-root mui-style-81bypp-IndicatorGroupAccordion-indicatorRow" role="listitem"><div class="MuiBox-root mui-style-ljlsjw-IndicatorGroupAccordion-result"><div class="MuiBox-root mui-style-i9gxme"><div class="MuiTypography-root MuiTypography-body3 mui-style-1vjzb77">Percentage of graduates from tertiary education graduating from Information and Communication Technologies programmes, both sexes (%)</div><div class="MuiBox-root mui-style-115v0p0-root"><div class="MuiButtonBase-root MuiChip-root MuiChip-filled MuiChip-sizeSmall MuiChip-colorDefault MuiChip-clickable MuiChip-clickableColorDefault MuiChip-filledDefault mui-style-17arxri-chip-xsmall-EduLvl" tabindex="0" role="button" title="ISCED 5 to 8 - Tertiary education"><div class="mui-style-1i0qwdi-root"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" fill="none" viewBox="0 0 16 16" class="metadataIcon" font-size="small"><path fill="currentColor" fill-rule="evenodd" d="M10 4a2 2 0 1 0 0-4 2 2 0 0 0 0 4m1.74 11.149.26-.95c-.649.273-1.965.485-2.522.084-.565-.406-.2-1.773.002-2.394l.974-3.07c.169-.5.249-1.222.249-1.635C10.703 5.753 9.457 5 7.76 5c-1.13 0-2.45.463-3.5.844L4 6.794c.471-.158.992-.307 1.462-.307.964 0 1.319.222 1.319 1.055 0 .483-.17 1.093-.31 1.562-.16.509-.307.957-.439 1.358-.51 1.556-.787 2.403-.787 3.347 0 .633.263 1.155.789 1.566 1.624 1.274 4.347.272 5.457-.136.095-.035.179-.066.249-.09" clip-rule="evenodd"></path></svg></div><span class="MuiChip-label MuiChip-labelSmall mui-style-4y436t">ISCED 5 to 8 - Tertiary education</span></div><div class="MuiButtonBase-root MuiChip-root MuiChip-filled MuiChip-sizeSmall MuiChip-colorDefault MuiChip-clickable MuiChip-clickableColorDefault MuiChip-filledDefault mui-style-17hgrvp-chip-xsmall" tabindex="0" role="button" title="Information and Communication Technologies"><div class="mui-style-1i0qwdi-root"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" fill="none" viewBox="0 0 16 16" class="metadataIcon" font-size="small"><path fill="currentColor" fill-rule="evenodd" d="M10 4a2 2 0 1 0 0-4 2 2 0 0 0 0 4m1.74 11.149.26-.95c-.649.273-1.965.485-2.522.084-.565-.406-.2-1.773.002-2.394l.974-3.07c.169-.5.249-1.222.249-1.635C10.703 5.753 9.457 5 7.76 5c-1.13 0-2.45.463-3.5.844L4 6.794c.471-.158.992-.307 1.462-.307.964 0 1.319.222 1.319 1.055 0 .483-.17 1.093-.31 1.562-.16.509-.307.957-.439 1.358-.51 1.556-.787 2.403-.787 3.347 0 .633.263 1.155.789 1.566 1.624 1.274 4.347.272 5.457-.136.095-.035.179-.066.249-.09" clip-rule="evenodd"></path></svg></div><span class="MuiChip-label MuiChip-labelSmall mui-style-4y436t">Information and Communication Technologies</span></div></div></div><button class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorPrimary cart-button mui-style-oo8eet-IndicatorGroupAccordion-indicatorRowCartButton" tabindex="0" type="button">Add<span class="MuiButton-icon MuiButton-endIcon MuiButton-iconSizeSmall mui-style-5yqlck"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="16" fill="none" viewBox="0 0 16 16" color="primary"><path fill="currentColor" fill-rule="evenodd" d="M9 0H7v7H0v2h7v7h2V9h7V7H9z" clip-rule="evenodd"></path></svg></span></button></div></div><div class="mui-style-15-IndicatorGroupAccordion-indicatorRow-ref MuiBox-root mui-style-81bypp-IndicatorGroupAccordion-indicatorRow" role="listitem"><div class="MuiBox-root mui-style-ljlsjw-IndicatorGroupAccordion-result"><div class="MuiBox-root mui-style-i9gxme"><div class="MuiTypography-root MuiTypography-body3 mui-style-1vjzb77">Percentage of graduates from tertiary education graduating from Engineering, Manufacturing and Construction  programmes, both sexes (%)</div><div class="MuiBox-root mui-style-115v0p0-root"><div class="MuiButtonBase-root MuiChip-root MuiChip-filled MuiChip-sizeSmall MuiChip-colorDefault MuiChip-clickable MuiChip-clickableColorDefault MuiChip-filledDefault mui-style-17arxri-chip-xsmall-EduLvl" tabindex="0" role="button" title="ISCED 5 to 8 - Tertiary education"><div class="mui-style-1i0qwdi-root"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" fill="none" viewBox="0 0 16 16" class="metadataIcon" font-size="small"><path fill="currentColor" fill-rule="evenodd" d="M10 4a2 2 0 1 0 0-4 2 2 0 0 0 0 4m1.74 11.149.26-.95c-.649.273-1.965.485-2.522.084-.565-.406-.2-1.773.002-2.394l.974-3.07c.169-.5.249-1.222.249-1.635C10.703 5.753 9.457 5 7.76 5c-1.13 0-2.45.463-3.5.844L4 6.794c.471-.158.992-.307 1.462-.307.964 0 1.319.222 1.319 1.055 0 .483-.17 1.093-.31 1.562-.16.509-.307.957-.439 1.358-.51 1.556-.787 2.403-.787 3.347 0 .633.263 1.155.789 1.566 1.624 1.274 4.347.272 5.457-.136.095-.035.179-.066.249-.09" clip-rule="evenodd"></path></svg></div><span class="MuiChip-label MuiChip-labelSmall mui-style-4y436t">ISCED 5 to 8 - Tertiary education</span></div><div class="MuiButtonBase-root MuiChip-root MuiChip-filled MuiChip-sizeSmall MuiChip-colorDefault MuiChip-clickable MuiChip-clickableColorDefault MuiChip-filledDefault mui-style-17hgrvp-chip-xsmall" tabindex="0" role="button" title="Engineering, Manufacturing and Construction"><span class="MuiChip-label MuiChip-labelSmall mui-style-4y436t">Engineering, Manufacturing and Construction</span></div></div></div><button class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorPrimary cart-button mui-style-oo8eet-IndicatorGroupAccordion-indicatorRowCartButton" tabindex="0" type="button">Add<span class="MuiButton-icon MuiButton-endIcon MuiButton-iconSizeSmall mui-style-5yqlck"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="16" fill="none" viewBox="0 0 16 16" color="primary"><path fill="currentColor" fill-rule="evenodd" d="M9 0H7v7H0v2h7v7h2V9h7V7H9z" clip-rule="evenodd"></path></svg></span></button></div></div><div class="mui-style-15-IndicatorGroupAccordion-indicatorRow-ref MuiBox-root mui-style-81bypp-IndicatorGroupAccordion-indicatorRow" role="listitem"><div class="MuiBox-root mui-style-ljlsjw-IndicatorGroupAccordion-result"><div class="MuiBox-root mui-style-i9gxme"><div class="MuiTypography-root MuiTypography-body3 mui-style-1vjzb77">Percentage of graduates from tertiary education graduating from Agriculture, Forestry, Fisheries and Veterinary programmes, both sexes (%)</div><div class="MuiBox-root mui-style-115v0p0-root"><div class="MuiButtonBase-root MuiChip-root MuiChip-filled MuiChip-sizeSmall MuiChip-colorDefault MuiChip-clickable MuiChip-clickableColorDefault MuiChip-filledDefault mui-style-17arxri-chip-xsmall-EduLvl" tabindex="0" role="button" title="ISCED 5 to 8 - Tertiary education"><div class="mui-style-1i0qwdi-root"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" fill="none" viewBox="0 0 16 16" class="metadataIcon" font-size="small"><path fill="currentColor" fill-rule="evenodd" d="M10 4a2 2 0 1 0 0-4 2 2 0 0 0 0 4m1.74 11.149.26-.95c-.649.273-1.965.485-2.522.084-.565-.406-.2-1.773.002-2.394l.974-3.07c.169-.5.249-1.222.249-1.635C10.703 5.753 9.457 5 7.76 5c-1.13 0-2.45.463-3.5.844L4 6.794c.471-.158.992-.307 1.462-.307.964 0 1.319.222 1.319 1.055 0 .483-.17 1.093-.31 1.562-.16.509-.307.957-.439 1.358-.51 1.556-.787 2.403-.787 3.347 0 .633.263 1.155.789 1.566 1.624 1.274 4.347.272 5.457-.136.095-.035.179-.066.249-.09" clip-rule="evenodd"></path></svg></div><span class="MuiChip-label MuiChip-labelSmall mui-style-4y436t">ISCED 5 to 8 - Tertiary education</span></div><div class="MuiButtonBase-root MuiChip-root MuiChip-filled MuiChip-sizeSmall MuiChip-colorDefault MuiChip-clickable MuiChip-clickableColorDefault MuiChip-filledDefault
+ mui-style-17hgrvp-chip-xsmall" tabindex="0" role="button" title="Agriculture, Forestry, Fisheries and Veterinary"><span class="MuiChip-label MuiChip-labelSmall mui-style-4y436t">Agriculture, Forestry, Fisheries and Veterinary</span></div></div></div><button class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorPrimary cart-button mui-style-oo8eet-IndicatorGroupAccordion-indicatorRowCartButton" tabindex="0" type="button">Add<span class="MuiButton-icon MuiButton-endIcon MuiButton-iconSizeSmall mui-style-5yqlck"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="16"
+
+[Message truncated - exceeded 50,000 character limit]
+Now I understand the exact flow. Let me rewrite the scraper with the correct navigation steps:
+
+Update Todos
+
+Rewrite navigate_to_stem_indicator with correct flow
+
+Update search functionality to use search box
+
+Add click on Graduates folder from search results
+
+Add click on Distribution accordion to expand
+
+Add click on STEM indicator Add button
+
+Add click on View data link
+
+Update download flow
+Read D:\Projects\SIMBA-RUNBOOKS\STEMGRADS_Runbook\scraper.py
+Now let me rewrite the navigate_to_stem_indicator method with the correct flow.
+
+Edit D:\Projects\SIMBA-RUNBOOKS\STEMGRADS_Runbook\scraper.py
+Added 160 lines
+Update Todos
+
+Rewrite navigate_to_stem_indicator with correct flow
+
+Update search functionality to use search box
+
+Add click on Graduates folder from search results
+
+Add click on Distribution accordion to expand
+
+Add click on STEM indicator Add button
+
+Add click on View data link
+
+Update download flow (Download filtered data button)
+Now let me update the download/export method. Let me read the current one first.
+
+Grep "def find_and_click_export" (in D:\Projects\SIMBA-RUNBOOKS\STEMGRADS_Runbook\scraper.py)
+81 lines of output
+Edit D:\Projects\SIMBA-RUNBOOKS\STEMGRADS_Runbook\scraper.py
+Added 1 line
+Grep "def select_csv_format_and_download" (in D:\Projects\SIMBA-RUNBOOKS\STEMGRADS_Runbook\scraper.py)
+61 lines of output
+Edit D:\Projects\SIMBA-RUNBOOKS\STEMGRADS_Runbook\scraper.py
+Added 22 lines
+Update Todos
+
+Rewrite navigate_to_stem_indicator with correct flow
+
+Update search functionality to use search box
+
+Add click on Graduates folder from search results
+
+Add click on Distribution accordion to expand
+
+Add click on STEM indicator Add button
+
+Add click on View data link
+
+Update download flow (Download filtered data button)
+
+Verify download_data method calls steps in correct order
+Grep "def download_data" (in D:\Projects\SIMBA-RUNBOOKS\STEMGRADS_Runbook\scraper.py)
+81 lines of output
+Update Todos
+
+Rewrite navigate_to_stem_indicator with correct flow
+
+Update search functionality to use search box
+
+Add click on Graduates folder from search results
+
+Add click on Distribution accordion to expand
+
+Add click on STEM indicator Add button
+
+Add click on View data link
+
+Update download flow (Download filtered data button)
+
+Verify download_data method calls steps in correct order
+I've rewritten the scraper with the correct navigation flow. Here's the updated step-by-step process:
+
+Updated Scraper Flow
+Step 1: Visit http://data.uis.unesco.org/
+
+Step 2: Click "Browse data" link → Goes to /browser
+
+Step 3: Search for "Percentage of graduates by field of education (tertiary education)" in the search box (#framework-indicator-search-box)
+
+Step 4: Click "Graduates" folder from search results dropdown
+
+Step 5: Click "Distribution of graduates by field of study" accordion to expand (13 results)
+
+Step 6: Find the STEM indicator row and click its "Add" button:
+
+"Percentage of graduates from Science, Technology, Engineering and Mathematics programmes..."
+Step 7: Click "View data" link (appears after adding indicator)
+
+Step 8: Set time range using slider (drag to min/max)
+
+Step 9: Click "Download filtered data" button
+
+Step 10: Select CSV format and click "Download"
+
+Try running it now:
+
+
+python orchestrator.py
+Watch the browser and let me know what step fails so I can adjust the selectors.
+
+just click the graduates from the  side bar its easier
+Good point! Let me simplify the navigation to use the sidebar instead of search.
+
+Edit D:\Projects\SIMBA-RUNBOOKS\STEMGRADS_Runbook\scraper.py
+Added 2 lines
+Done. The navigation is now simpler:
+
+Click "Browse data"
+Click "Education" category
+Click "Other Policy Relevant Indicators - Education"
+Click "Graduates" from the left sidebar (instead of searching)
+Click "Distribution of graduates by field of study" accordion
+Click "Add" for STEM indicator
+Click "View data"
+Try running it:
+
+
+python orchestrator.py
+we failed(MarkCastro@DESKTOP-UP05FK7 MINGW64 /d/Projects/SIMBA-RUNBOOKS/STEMGRADS_Runbook
+$ python orchestrator.py 
+2026-02-10 11:13:18 - root - INFO - ======================================================================
+2026-02-10 11:13:18 - root - INFO - STEMGRADS Data Collection - Logging initialized
+2026-02-10 11:13:18 - root - INFO - Log file: D:\Projects\SIMBA-RUNBOOKS\STEMGRADS_Runbook\logs\20260210_111316\stemgrads_20260210_111316.log
+2026-02-10 11:13:18 - root - INFO - Log level: DEBUG
+2026-02-10 11:13:18 - root - INFO - ======================================================================
+
+======================================================================
+ STEMGRADS - UNESCO STEM Field Graduates Data Collection
+ Distribution of tertiary graduates by field of study
+======================================================================
+
+Configuration:
+----------------------------------------------------------------------
+  Source URL: http://data.uis.unesco.org/
+  Dataset: STEMGRADS
+  Countries: 108 mapped
+  Year Range: Dynamic (read from website slider)
+  Output: D:\Projects\SIMBA-RUNBOOKS\STEMGRADS_Runbook\output\20260210_111316
+  Master Data: D:\Projects\SIMBA-RUNBOOKS\STEMGRADS_Runbook\Master Data\Master_STEMGRADS_DATA.csv
+  Timestamp: 20260210_111316
+----------------------------------------------------------------------
+
+STEP 1: Downloading Data from UNESCO
+======================================================================
+
+2026-02-10 11:13:18 - scraper - INFO - Checking Windows Registry for Chrome version...
+2026-02-10 11:13:18 - scraper - INFO - Found Chrome version: 144.0.7559.133 (major: 144)
+2026-02-10 11:13:18 - scraper - INFO - Using Chrome version 144 for driver
+2026-02-10 11:13:18 - undetected_chromedriver.patcher - DEBUG - getting release number from /latest-versions-per-milestone-with-downloads.json
+2026-02-10 11:13:18 - undetected_chromedriver.patcher - DEBUG - downloading from https://storage.googleapis.com/chrome-for-testing-public/144.0.7559.133/win32/chromedriver-win32.zip
+2026-02-10 11:13:19 - undetected_chromedriver.patcher - DEBUG - unzipping C:\Users\MARKCA~1\AppData\Local\Temp\tmpw1rnc5pc
+2026-02-10 11:13:19 - undetected_chromedriver.patcher - INFO - patching driver executable C:\Users\Mark Castro\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+2026-02-10 11:13:20 - undetected_chromedriver.patcher - DEBUG - found block:
+b'{window.cdc_adoQpoasnfa76pfcZLmcfl_Array = window.Array;window.cdc_adoQpoasnfa76pfcZLmcfl_Object = window.Object;window.cdc_adoQpoasnfa76pfcZLmcfl_Promise = window.Promise;window.cdc_adoQpoasnfa76pfcZLmcfl_Proxy = window.Proxy;window.cdc_adoQpoasnfa76pfcZLmcfl_Symbol = window.Symbol;window.cdc_adoQpoasnfa76pfcZLmcfl_JSON = window.JSON;window.cdc_adoQpoasnfa76pfcZLmcfl_Window = window.Window;}'
+replacing with:
+b'{console.log("undetected chromedriver 1337!")}                                                                                                                                                                     
+                                                                                                                                                                                        '
+2026-02-10 11:13:20 - undetected_chromedriver.patcher - DEBUG - patching took us 1.34 seconds
+2026-02-10 11:13:21 - selenium.webdriver.common.driver_finder - DEBUG - Skipping Selenium Manager; path to chrome driver specified in Service class: C:\Users\Mark Castro\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+2026-02-10 11:13:24 - selenium.webdriver.common.service - DEBUG - Started executable: `C:\Users\Mark Castro\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe` in a child process with pid: 14724 using 0 to output -3
+2026-02-10 11:13:24 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:54252/session {'capabilities': {'firstMatch': [{}], 'alwaysMatch': {'browserName': 'chrome', 'pageLoadStrategy': <PageLoadStrategy.normal: 'normal'>, 'goog:chromeOptions': {'extensions': [], 'binary': 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe', 'args': ['--window-size=1920,1080', '--disable-gpu', '--no-sandbox', '--start-maximized', '--remote-debugging-host=127.0.0.1', '--remote-debugging-port=54251', '--user-data-dir=C:\\Users\\MARKCA~1\\AppData\\Local\\Temp\\tmpbysril33', '--lang=en-US', '--no-default-browser-check', '--no-first-run', '--no-sandbox', '--test-type', '--window-size=1920,1080', '--start-maximized', '--no-sandbox', '--log-level=0'], 'debuggerAddress': '127.0.0.1:54251'}}}}
+2026-02-10 11:13:24 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:54252
+2026-02-10 11:13:24 - urllib3.connectionpool - DEBUG - http://localhost:54252 "POST /session HTTP/1.1" 200 0
+2026-02-10 11:13:24 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"144.0.7559.133","chrome":{"chromedriverVersion":"144.0.7559.133 (7da823b1d594d1b49797911900e003ec96a8c0e7-refs/branch-heads/7559@{#4253})"},"fedcm:accounts":true,"goog:chromeOptions":{"debuggerAddress":"127.0.0.1:54251"},"pageLoadStrategy":"normal","platformName":"","proxy":{},"setWindowRect":false,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:extension:minPinLength":true,"webauthn:extension:prf":true,"webauthn:virtualAuthenticators":true},"sessionId":"e13da4569c343d2a3ae421d6db03c30a"}} | headers=HTTPHeaderDict({'Content-Length': '762', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-10 11:13:24 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-10 11:13:24 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:54252/session/e13da4569c343d2a3ae421d6db03c30a/timeouts {'pageLoad': 60000}
+2026-02-10 11:13:24 - urllib3.connectionpool - DEBUG - http://localhost:54252 "POST /session/e13da4569c343d2a3ae421d6db03c30a/timeouts HTTP/1.1" 200 0
+2026-02-10 11:13:24 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-10 11:13:24 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-10 11:13:24 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:54252/session/e13da4569c343d2a3ae421d6db03c30a/window/maximize {}
+2026-02-10 11:13:24 - urllib3.connectionpool - DEBUG - http://localhost:54252 "POST /session/e13da4569c343d2a3ae421d6db03c30a/window/maximize HTTP/1.1" 200 0
+2026-02-10 11:13:24 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":{"height":1048,"width":1936,"x":-8,"y":-8}} | headers=HTTPHeaderDict({'Content-Length': '52', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-10 11:13:24 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-10 11:13:24 - scraper - INFO - Chrome driver initialized
+2026-02-10 11:13:24 - scraper - INFO - Download directory: D:\Projects\SIMBA-RUNBOOKS\STEMGRADS_Runbook\downloads\20260210_111316
+2026-02-10 11:13:24 - scraper - INFO - Navigating to http://data.uis.unesco.org/
+2026-02-10 11:13:24 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:54252/session/e13da4569c343d2a3ae421d6db03c30a/url {'url': 'http://data.uis.unesco.org/'}
+2026-02-10 11:13:28 - urllib3.connectionpool - DEBUG - http://localhost:54252 "POST /session/e13da4569c343d2a3ae421d6db03c30a/url HTTP/1.1" 200 0
+2026-02-10 11:13:28 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-10 11:13:28 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-10 11:13:33 - scraper - INFO - Page loaded successfully
+2026-02-10 11:13:33 - scraper - INFO - Waiting for page to fully load...
+2026-02-10 11:13:41 - scraper - INFO - ============================================================
+2026-02-10 11:13:41 - scraper - INFO - NAVIGATING TO STEM INDICATOR
+2026-02-10 11:13:41 - scraper - INFO - ============================================================
+2026-02-10 11:13:44 - scraper - INFO - STEP 1: Clicking 'Browse data' link...
+2026-02-10 11:13:44 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:54252/session/e13da4569c343d2a3ae421d6db03c30a/elements {'using': 'xpath', 'value': "//a[contains(text(), 'Browse data')]"}
+2026-02-10 11:13:44 - urllib3.connectionpool - DEBUG - http://localhost:54252 "POST /session/e13da4569c343d2a3ae421d6db03c30a/elements HTTP/1.1" 200 0
+2026-02-10 11:13:44 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.3B190AA57EB9B9684413E3A1B51A7AF2.d.A8C373EF0BEDAADB93CD2FF3161D84DB.e.7"}]} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-10 11:13:44 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-10 11:13:44 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:54252/session/e13da4569c343d2a3ae421d6db03c30a/element/f.3B190AA57EB9B9684413E3A1B51A7AF2.d.A8C373EF0BEDAADB93CD2FF3161D84DB.e.7/click {}
+2026-02-10 11:13:44 - urllib3.connectionpool - DEBUG - http://localhost:54252 "POST /session/e13da4569c343d2a3ae421d6db03c30a/element/f.3B190AA57EB9B9684413E3A1B51A7AF2.d.A8C373EF0BEDAADB93CD2FF3161D84DB.e.7/click HTTP/1.1" 200 0
+2026-02-10 11:13:44 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-10 11:13:44 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-10 11:13:44 - scraper - INFO - Clicked 'Browse data' link
+2026-02-10 11:13:48 - scraper - INFO - STEP 2: Clicking 'Education' category...
+2026-02-10 11:13:48 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:54252/session/e13da4569c343d2a3ae421d6db03c30a/elements {'using': 'xpath', 'value': "//div[contains(text(), 'Education')]"}
+2026-02-10 11:13:48 - urllib3.connectionpool - DEBUG - http://localhost:54252 "POST /session/e13da4569c343d2a3ae421d6db03c30a/elements HTTP/1.1" 200 0
+2026-02-10 11:13:48 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'Content-Length': '12', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-10 11:13:48 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-10 11:13:48 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:54252/session/e13da4569c343d2a3ae421d6db03c30a/elements {'using': 'xpath', 'value': "//h5[contains(text(), 'Education')]"}
+2026-02-10 11:13:48 - urllib3.connectionpool - DEBUG - http://localhost:54252 "POST /session/e13da4569c343d2a3ae421d6db03c30a/elements HTTP/1.1" 200 0
+2026-02-10 11:13:48 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'Content-Length': '12', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-10 11:13:48 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-10 11:13:48 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:54252/session/e13da4569c343d2a3ae421d6db03c30a/elements {'using': 'xpath', 'value': "//*[contains(@class, 'MuiTypography') and text()='Education']"}
+2026-02-10 11:13:48 - urllib3.connectionpool - DEBUG - http://localhost:54252 "POST /session/e13da4569c343d2a3ae421d6db03c30a/elements HTTP/1.1" 200 0
+2026-02-10 11:13:48 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'Content-Length': '12', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-10 11:13:48 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-10 11:13:48 - scraper - INFO - Clicking 'Other Policy Relevant Indicators - Education'...
+2026-02-10 11:13:48 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:54252/session/e13da4569c343d2a3ae421d6db03c30a/elements {'using': 'xpath', 'value': "//a[contains(text(), 'Other Policy Relevant Indicators')]"}
+2026-02-10 11:13:48 - urllib3.connectionpool - DEBUG - http://localhost:54252 "POST /session/e13da4569c343d2a3ae421d6db03c30a/elements HTTP/1.1" 200 0
+2026-02-10 11:13:48 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'Content-Length': '12', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-10 11:13:48 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-10 11:13:48 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:54252/session/e13da4569c343d2a3ae421d6db03c30a/elements {'using': 'xpath', 'value': "//*[contains(text(), 'Other Policy Relevant Indicators - Education')]"}
+2026-02-10 11:13:48 - urllib3.connectionpool - DEBUG - http://localhost:54252 "POST /session/e13da4569c343d2a3ae421d6db03c30a/elements HTTP/1.1" 200 0
+2026-02-10 11:13:48 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.3B190AA57EB9B9684413E3A1B51A7AF2.d.A8C373EF0BEDAADB93CD2FF3161D84DB.e.46"},{"element-6066-11e4-a52e-4f735466cecf":"f.3B190AA57EB9B9684413E3A1B51A7AF2.d.A8C373EF0BEDAADB93CD2FF3161D84DB.e.47"}]} | headers=HTTPHeaderDict({'Content-Length': '245', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-10 11:13:48 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-10 11:13:48 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:54252/session/e13da4569c343d2a3ae421d6db03c30a/element/f.3B190AA57EB9B9684413E3A1B51A7AF2.d.A8C373EF0BEDAADB93CD2FF3161D84DB.e.46/click {}
+2026-02-10 11:13:48 - urllib3.connectionpool - DEBUG - http://localhost:54252 "POST /session/e13da4569c343d2a3ae421d6db03c30a/element/f.3B190AA57EB9B9684413E3A1B51A7AF2.d.A8C373EF0BEDAADB93CD2FF3161D84DB.e.46/click HTTP/1.1" 200 0
+2026-02-10 11:13:48 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-10 11:13:48 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-10 11:13:48 - scraper - INFO - Clicked 'Other Policy Relevant Indicators - Education'
+2026-02-10 11:13:51 - scraper - INFO - STEP 3: Clicking 'Graduates' from left sidebar...
+2026-02-10 11:13:51 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:54252/session/e13da4569c343d2a3ae421d6db03c30a/elements {'using': 'xpath', 'value': "//a[contains(text(), 'Graduates')]"}
+2026-02-10 11:13:52 - urllib3.connectionpool - DEBUG - http://localhost:54252 "POST /session/e13da4569c343d2a3ae421d6db03c30a/elements HTTP/1.1" 200 0
+2026-02-10 11:13:52 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.3B190AA57EB9B9684413E3A1B51A7AF2.d.A8C373EF0BEDAADB93CD2FF3161D84DB.e.59"},{"element-6066-11e4-a52e-4f735466cecf":"f.3B190AA57EB9B9684413E3A1B51A7AF2.d.A8C373EF0BEDAADB93CD2FF3161D84DB.e.60"}]} | headers=HTTPHeaderDict({'Content-Length': '245', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-10 11:13:52 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-10 11:13:52 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:54252/session/e13da4569c343d2a3ae421d6db03c30a/execute/sync {'script': '/* isDisplayed */return (function(){return (function(){var g=this||self;\nfunction aa(a){var b=typeof...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.3B190AA57EB9B9684413E3A1B51A7AF2.d.A8C373EF0BEDAADB93CD2FF3161D84DB.e.59'}]}
+2026-02-10 11:13:52 - urllib3.connectionpool - DEBUG - http://localhost:54252 "POST /session/e13da4569c343d2a3ae421d6db03c30a/execute/sync HTTP/1.1" 200 0
+2026-02-10 11:13:52 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":true} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-10 11:13:52 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-10 11:13:52 - selenium.webdriver.remote.remote_connection - DEBUG - GET http://localhost:54252/session/e13da4569c343d2a3ae421d6db03c30a/element/f.3B190AA57EB9B9684413E3A1B51A7AF2.d.A8C373EF0BEDAADB93CD2FF3161D84DB.e.59/text {}
+2026-02-10 11:13:52 - urllib3.connectionpool - DEBUG - http://localhost:54252 "GET /session/e13da4569c343d2a3ae421d6db03c30a/element/f.3B190AA57EB9B9684413E3A1B51A7AF2.d.A8C373EF0BEDAADB93CD2FF3161D84DB.e.59/text HTTP/1.1" 200 0
+2026-02-10 11:13:52 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":"Graduates"} | headers=HTTPHeaderDict({'Content-Length': '21', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-10 11:13:52 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-10 11:13:52 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:54252/session/e13da4569c343d2a3ae421d6db03c30a/element/f.3B190AA57EB9B9684413E3A1B51A7AF2.d.A8C373EF0BEDAADB93CD2FF3161D84DB.e.59/click {}
+2026-02-10 11:13:52 - urllib3.connectionpool - DEBUG - http://localhost:54252 "POST /session/e13da4569c343d2a3ae421d6db03c30a/element/f.3B190AA57EB9B9684413E3A1B51A7AF2.d.A8C373EF0BEDAADB93CD2FF3161D84DB.e.59/click HTTP/1.1" 200 0
+2026-02-10 11:13:52 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-10 11:13:52 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-10 11:13:52 - scraper - INFO - Clicked 'Graduates' from sidebar
+2026-02-10 11:13:55 - scraper - INFO - STEP 4: Expanding 'Distribution of graduates by field of study' accordion...
+2026-02-10 11:13:55 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:54252/session/e13da4569c343d2a3ae421d6db03c30a/elements {'using': 'xpath', 'value': "//h5[contains(text(), 'Distribution of graduates by field of study')]"}
+2026-02-10 11:13:55 - urllib3.connectionpool - DEBUG - http://localhost:54252 "POST /session/e13da4569c343d2a3ae421d6db03c30a/elements HTTP/1.1" 200 0
+2026-02-10 11:13:55 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.3B190AA57EB9B9684413E3A1B51A7AF2.d.A8C373EF0BEDAADB93CD2FF3161D84DB.e.74"}]} | headers=HTTPHeaderDict({'Content-Length': '128', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-10 11:13:55 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-10 11:13:55 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:54252/session/e13da4569c343d2a3ae421d6db03c30a/element/f.3B190AA57EB9B9684413E3A1B51A7AF2.d.A8C373EF0BEDAADB93CD2FF3161D84DB.e.74/element {'using': 'xpath', 'value': './ancestor::button'}
+2026-02-10 11:13:55 - urllib3.connectionpool - DEBUG - http://localhost:54252 "POST /session/e13da4569c343d2a3ae421d6db03c30a/element/f.3B190AA57EB9B9684413E3A1B51A7AF2.d.A8C373EF0BEDAADB93CD2FF3161D84DB.e.74/element HTTP/1.1" 200 0
+2026-02-10 11:13:55 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.3B190AA57EB9B9684413E3A1B51A7AF2.d.A8C373EF0BEDAADB93CD2FF3161D84DB.e.67"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-10 11:13:55 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-10 11:13:55 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:54252/session/e13da4569c343d2a3ae421d6db03c30a/element/f.3B190AA57EB9B9684413E3A1B51A7AF2.d.A8C373EF0BEDAADB93CD2FF3161D84DB.e.67/click {}
+2026-02-10 11:13:55 - urllib3.connectionpool - DEBUG - http://localhost:54252 "POST /session/e13da4569c343d2a3ae421d6db03c30a/element/f.3B190AA57EB9B9684413E3A1B51A7AF2.d.A8C373EF0BEDAADB93CD2FF3161D84DB.e.67/click HTTP/1.1" 200 0
+2026-02-10 11:13:55 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-10 11:13:55 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-10 11:13:55 - scraper - INFO - Clicked 'Distribution of graduates by field of study' accordion
+2026-02-10 11:13:57 - scraper - INFO - STEP 5: Finding STEM indicator and clicking 'Add' button...
+2026-02-10 11:13:57 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:54252/session/e13da4569c343d2a3ae421d6db03c30a/elements {'using': 'xpath', 'value': "//div[contains(@class, 'indicatorRow') and .//div[contains(text(), 'Science, Technology, Engineering..."}
+2026-02-10 11:13:57 - urllib3.connectionpool - DEBUG - http://localhost:54252 "POST /session/e13da4569c343d2a3ae421d6db03c30a/elements HTTP/1.1" 200 0
+2026-02-10 11:13:57 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'Content-Length': '12', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-10 11:13:57 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-10 11:13:57 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:54252/session/e13da4569c343d2a3ae421d6db03c30a/elements {'using': 'xpath', 'value': "//*[contains(text(), 'Science, Technology, Engineering and Mathematics')]/ancestor::div[contains(@cl..."}
+2026-02-10 11:13:57 - urllib3.connectionpool - DEBUG - http://localhost:54252 "POST /session/e13da4569c343d2a3ae421d6db03c30a/elements HTTP/1.1" 200 0
+2026-02-10 11:13:57 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'Content-Length': '12', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-10 11:13:57 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-10 11:13:57 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:54252/session/e13da4569c343d2a3ae421d6db03c30a/elements {'using': 'xpath', 'value': "//*[contains(text(), 'Science, Technology, Engineering and Mathematics')]"}
+2026-02-10 11:13:57 - urllib3.connectionpool - DEBUG - http://localhost:54252 "POST /session/e13da4569c343d2a3ae421d6db03c30a/elements HTTP/1.1" 200 0
+2026-02-10 11:13:57 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'Content-Length': '12', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-10 11:13:57 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-10 11:13:57 - scraper - INFO - Trying fallback method to find STEM Add button...
+2026-02-10 11:13:57 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:54252/session/e13da4569c343d2a3ae421d6db03c30a/elements {'using': 'xpath', 'value': "//*[contains(text(), 'Science, Technology, Engineering and Mathematics')]"}
+2026-02-10 11:13:57 - urllib3.connectionpool - DEBUG - http://localhost:54252 "POST /session/e13da4569c343d2a3ae421d6db03c30a/elements HTTP/1.1" 200 0
+2026-02-10 11:13:57 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'Content-Length': '12', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-10 11:13:57 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-10 11:13:57 - scraper - ERROR - Could not click Add button for STEM indicator!
+2026-02-10 11:14:00 - scraper - INFO - Expanding Time range section...
+2026-02-10 11:14:00 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:54252/session/e13da4569c343d2a3ae421d6db03c30a/elements {'using': 'xpath', 'value': "//div[contains(text(), 'Time range')]"}
+2026-02-10 11:14:00 - urllib3.connectionpool - DEBUG - http://localhost:54252 "POST /session/e13da4569c343d2a3ae421d6db03c30a/elements HTTP/1.1" 200 0
+2026-02-10 11:14:00 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'Content-Length': '12', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-10 11:14:00 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-10 11:14:00 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:54252/session/e13da4569c343d2a3ae421d6db03c30a/elements {'using': 'xpath', 'value': "//span[contains(text(), 'Time range')]"}
+2026-02-10 11:14:00 - urllib3.connectionpool - DEBUG - http://localhost:54252 "POST /session/e13da4569c343d2a3ae421d6db03c30a/elements HTTP/1.1" 200 0
+2026-02-10 11:14:00 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'Content-Length': '12', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-10 11:14:00 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-10 11:14:00 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:54252/session/e13da4569c343d2a3ae421d6db03c30a/elements {'using': 'xpath', 'value': "//button[contains(text(), 'Time range')]"}
+2026-02-10 11:14:00 - urllib3.connectionpool - DEBUG - http://localhost:54252 "POST /session/e13da4569c343d2a3ae421d6db03c30a/elements HTTP/1.1" 200 0
+2026-02-10 11:14:00 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'Content-Length': '12', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-10 11:14:00 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-10 11:14:00 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:54252/session/e13da4569c343d2a3ae421d6db03c30a/elements {'using': 'xpath', 'value': "//*[contains(@class, 'Accordion')]//*[contains(text(), 'Time range')]"}
+2026-02-10 11:14:00 - urllib3.connectionpool - DEBUG - http://localhost:54252 "POST /session/e13da4569c343d2a3ae421d6db03c30a/elements HTTP/1.1" 200 0
+2026-02-10 11:14:00 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'Content-Length': '12', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-10 11:14:00 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-10 11:14:00 - scraper - INFO - Time range section may already be expanded
+2026-02-10 11:14:02 - scraper - INFO - Setting time range using slider...
+2026-02-10 11:14:04 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:54252/session/e13da4569c343d2a3ae421d6db03c30a/elements {'using': 'css selector', 'value': "input[type='range'][aria-label='Year range']"}
+2026-02-10 11:14:04 - urllib3.connectionpool - DEBUG - http://localhost:54252 "POST /session/e13da4569c343d2a3ae421d6db03c30a/elements HTTP/1.1" 200 0
+2026-02-10 11:14:04 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'Content-Length': '12', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-10 11:14:04 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-10 11:14:04 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:54252/session/e13da4569c343d2a3ae421d6db03c30a/elements {'using': 'css selector', 'value': ".MuiSlider-root input[type='range']"}
+2026-02-10 11:14:04 - urllib3.connectionpool - DEBUG - http://localhost:54252 "POST /session/e13da4569c343d2a3ae421d6db03c30a/elements HTTP/1.1" 200 0
+2026-02-10 11:14:04 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'Content-Length': '12', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-10 11:14:04 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-10 11:14:04 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:54252/session/e13da4569c343d2a3ae421d6db03c30a/elements {'using': 'css selector', 'value': '.MuiSlider-thumb'}     
+2026-02-10 11:14:04 - urllib3.connectionpool - DEBUG - http://localhost:54252 "POST /session/e13da4569c343d2a3ae421d6db03c30a/elements HTTP/1.1" 200 0
+2026-02-10 11:14:04 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'Content-Length': '12', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-10 11:14:04 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-10 11:14:04 - scraper - WARNING - Could not find slider thumbs
+2026-02-10 11:14:04 - scraper - INFO - Setting time range using input fields (fallback)...
+2026-02-10 11:14:06 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:54252/session/e13da4569c343d2a3ae421d6db03c30a/elements {'using': 'css selector', 'value': "input[type='range'][aria-label='Year range']"}
+2026-02-10 11:14:06 - urllib3.connectionpool - DEBUG - http://localhost:54252 "POST /session/e13da4569c343d2a3ae421d6db03c30a/elements HTTP/1.1" 200 0
+2026-02-10 11:14:06 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'Content-Length': '12', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-10 11:14:06 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-10 11:14:06 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:54252/session/e13da4569c343d2a3ae421d6db03c30a/elements {'using': 'css selector', 'value': ".MuiSlider-root input[type='range']"}
+2026-02-10 11:14:06 - urllib3.connectionpool - DEBUG - http://localhost:54252 "POST /session/e13da4569c343d2a3ae421d6db03c30a/elements HTTP/1.1" 200 0
+2026-02-10 11:14:06 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'Content-Length': '12', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-10 11:14:06 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-10 11:14:06 - scraper - ERROR - Could not read year range from slider attributes!
+2026-02-10 11:14:09 - scraper - INFO - Looking for 'Download filtered data' button...
+2026-02-10 11:14:11 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:54252/session/e13da4569c343d2a3ae421d6db03c30a/elements {'using': 'xpath', 'value': "//button[contains(text(), 'Download filtered data')]"}
+2026-02-10 11:14:12 - urllib3.connectionpool - DEBUG - http://localhost:54252 "POST /session/e13da4569c343d2a3ae421d6db03c30a/elements HTTP/1.1" 200 0
+2026-02-10 11:14:12 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'Content-Length': '12', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-10 11:14:12 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-10 11:14:12 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:54252/session/e13da4569c343d2a3ae421d6db03c30a/elements {'using': 'xpath', 'value': "//button[contains(text(), 'Download')]"}
+2026-02-10 11:14:12 - urllib3.connectionpool - DEBUG - http://localhost:54252 "POST /session/e13da4569c343d2a3ae421d6db03c30a/elements HTTP/1.1" 200 0
+2026-02-10 11:14:12 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'Content-Length': '12', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-10 11:14:12 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-10 11:14:12 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:54252/session/e13da4569c343d2a3ae421d6db03c30a/elements {'using': 'xpath', 'value': "//*[contains(text(), 'Download filtered')]"}
+2026-02-10 11:14:12 - urllib3.connectionpool - DEBUG - http://localhost:54252 "POST /session/e13da4569c343d2a3ae421d6db03c30a/elements HTTP/1.1" 200 0
+2026-02-10 11:14:12 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'Content-Length': '12', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-10 11:14:12 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-10 11:14:12 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:54252/session/e13da4569c343d2a3ae421d6db03c30a/elements {'using': 'css selector', 'value': "button[data-testid='download-button']"}
+2026-02-10 11:14:12 - urllib3.connectionpool - DEBUG - http://localhost:54252 "POST /session/e13da4569c343d2a3ae421d6db03c30a/elements HTTP/1.1" 200 0
+2026-02-10 11:14:12 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'Content-Length': '12', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-10 11:14:12 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-10 11:14:12 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:54252/session/e13da4569c343d2a3ae421d6db03c30a/elements {'using': 'xpath', 'value': "//button[contains(@class, 'MuiButton') and contains(., 'Download')]"}
+2026-02-10 11:14:12 - urllib3.connectionpool - DEBUG - http://localhost:54252 "POST /session/e13da4569c343d2a3ae421d6db03c30a/elements HTTP/1.1" 200 0
+2026-02-10 11:14:12 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'Content-Length': '12', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-10 11:14:12 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-10 11:14:12 - scraper - INFO - Scrolling to find download button...
+2026-02-10 11:14:12 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:54252/session/e13da4569c343d2a3ae421d6db03c30a/execute/sync {'script': 'window.scrollTo(0, document.body.scrollHeight);', 'args': []}
+2026-02-10 11:14:12 - urllib3.connectionpool - DEBUG - http://localhost:54252 "POST /session/e13da4569c343d2a3ae421d6db03c30a/execute/sync HTTP/1.1" 200 0
+2026-02-10 11:14:12 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-10 11:14:12 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-10 11:14:14 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:54252/session/e13da4569c343d2a3ae421d6db03c30a/elements {'using': 'css selector', 'value': 'button.MuiButton-root'}
+2026-02-10 11:14:14 - urllib3.connectionpool - DEBUG - http://localhost:54252 "POST /session/e13da4569c343d2a3ae421d6db03c30a/elements HTTP/1.1" 200 0
+2026-02-10 11:14:14 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.3B190AA57EB9B9684413E3A1B51A7AF2.d.A8C373EF0BEDAADB93CD2FF3161D84DB.e.3"},{"element-6066-11e4-a52e-4f735466cecf":"f.3B190AA57EB9B9684413E3A1B51A7AF2.d.A8C373EF0BEDAADB93CD2FF3161D84DB.e.97"},{"element-6066-11e4-a52e-4f735466cecf":"f.3B190AA57EB9B9684413E3A1B51A7AF2.d.A8C373EF0BEDAADB93CD2FF3161D84DB.e.98"},{"element-6066-11e4-a52e-4f735466cecf":"f.3B190AA57EB9B9684413E3A1B51A7AF2.d.A8C373EF0BEDAADB93CD2FF3161D84DB.e.99"},{"element-6066-11e4-a52e-4f735466cecf":"f.3B190AA57EB9B9684413E3A1B51A7AF2.d.A8C373EF0BEDAADB93CD2FF3161D84DB.e.78"},{"element-6066-11e4-a52e-4f735466cecf":"f.3B190AA57EB9B9684413E3A1B51A7AF2.d.A8C373EF0BEDAADB93CD2FF3161D84DB.e.83"},{"element-6066-11e4-a52e-4f735466cecf":"f.3B190AA57EB9B9684413E3A1B51A7AF2.d.A8C373EF0BEDAADB93CD2FF3161D84DB.e.88"},{"element-6066-11e4-a52e-4f735466cecf":"f.3B190AA57EB9B9684413E3A1B51A7AF2.d.A8C373EF0BEDAADB93CD2FF3161D84DB.e.93"},{"element-6066-11e4-a52e-4f735466cecf":"f.3B190AA57EB9B9684413E3A1B51A7AF2.d.A8C373EF0BEDAADB93CD2FF3161D84DB.e.95"},{"element-6066-11e4-a52e-4f735466cecf":"f.3B190AA57EB9B9684413E3A1B51A7AF2.d.A8C373EF0BEDAADB93CD2FF3161D84DB.e.100"},{"element-6066-11e4-a52e-4f735466cecf":"f.3B190AA57EB9B9684413E3A1B51A7AF2.d.A8C373EF0BEDAADB93CD2FF3161D84DB.e.101"},{"element-6066-11e4-a52e-4f735466cecf":"f.3B190AA57EB9B9684413E3A1B51A7AF2.d.A8C373EF0BEDAADB93CD2FF3161D84DB.e.102"},{"element-6066-11e4-a52e-4f735466cecf":"f.3B190AA57EB9B9684413E3A1B51A7AF2.d.A8C373EF0BEDAADB93CD2FF3161D84DB.e.103"},{"element-6066-11e4-a52e-4f735466cecf":"f.3B190AA57EB9B9684413E3A1B51A7AF2.d.A8C373EF0BEDAADB93CD2FF3161D84DB.e.104"}]} | headers=HTTPHeaderDict({'Content-Length': '1653', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-10 11:14:14 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-10 11:14:14 - selenium.webdriver.remote.remote_connection - DEBUG - GET http://localhost:54252/session/e13da4569c343d2a3ae421d6db03c30a/element/f.3B190AA57EB9B9684413E3A1B51A7AF2.d.A8C373EF0BEDAADB93CD2FF3161D84DB.e.3/text {}
+2026-02-10 11:14:14 - urllib3.connectionpool - DEBUG - http://localhost:54252 "GET /session/e13da4569c343d2a3ae421d6db03c30a/element/f.3B190AA57EB9B9684413E3A1B51A7AF2.d.A8C373EF0BEDAADB93CD2FF3161D84DB.e.3/text HTTP/1.1" 200 0
+2026-02-10 11:14:14 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":"Feedback?"} | headers=HTTPHeaderDict({'Content-Length': '21', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-10 11:14:14 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-10 11:14:14 - selenium.webdriver.remote.remote_connection - DEBUG - GET http://localhost:54252/session/e13da4569c343d2a3ae421d6db03c30a/element/f.3B190AA57EB9B9684413E3A1B51A7AF2.d.A8C373EF0BEDAADB93CD2FF3161D84DB.e.97/text {}
+2026-02-10 11:14:14 - urllib3.connectionpool - DEBUG - http://localhost:54252 "GET /session/e13da4569c343d2a3ae421d6db03c30a/element/f.3B190AA57EB9B9684413E3A1B51A7AF2.d.A8C373EF0BEDAADB93CD2FF3161D84DB.e.97/text HTTP/1.1" 200 0
+2026-02-10 11:14:14 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":"Other Policy Relevant Indicators - Education"} | headers=HTTPHeaderDict({'Content-Length': '56', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-10 11:14:14 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-10 11:14:14 - selenium.webdriver.remote.remote_connection - DEBUG - GET http://localhost:54252/session/e13da4569c343d2a3ae421d6db03c30a/element/f.3B190AA57EB9B9684413E3A1B51A7AF2.d.A8C373EF0BEDAADB93CD2FF3161D84DB.e.98/text {}
+2026-02-10 11:14:14 - urllib3.connectionpool - DEBUG - http://localhost:54252 "GET /session/e13da4569c343d2a3ae421d6db03c30a/element/f.3B190AA57EB9B9684413E3A1B51A7AF2.d.A8C373EF0BEDAADB93CD2FF3161D84DB.e.98/text HTTP/1.1" 200 0
+2026-02-10 11:14:14 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":"Graduates"} | headers=HTTPHeaderDict({'Content-Length': '21', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-10 11:14:14 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-10 11:14:14 - selenium.webdriver.remote.remote_connection - DEBUG - GET http://localhost:54252/session/e13da4569c343d2a3ae421d6db03c30a/element/f.3B190AA57EB9B9684413E3A1B51A7AF2.d.A8C373EF0BEDAADB93CD2FF3161D84DB.e.99/text {}
+2026-02-10 11:14:14 - urllib3.connectionpool - DEBUG - http://localhost:54252 "GET /session/e13da4569c343d2a3ae421d6db03c30a/element/f.3B190AA57EB9B9684413E3A1B51A7AF2.d.A8C373EF0BEDAADB93CD2FF3161D84DB.e.99/text HTTP/1.1" 200 0
+2026-02-10 11:14:14 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":"Other Policy Relevant Indicators - Education"} | headers=HTTPHeaderDict({'Content-Length': '56', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-10 11:14:14 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-10 11:14:14 - selenium.webdriver.remote.remote_connection - DEBUG - GET http://localhost:54252/session/e13da4569c343d2a3ae421d6db03c30a/element/f.3B190AA57EB9B9684413E3A1B51A7AF2.d.A8C373EF0BEDAADB93CD2FF3161D84DB.e.78/text {}
+2026-02-10 11:14:14 - urllib3.connectionpool - DEBUG - http://localhost:54252 "GET /session/e13da4569c343d2a3ae421d6db03c30a/element/f.3B190AA57EB9B9684413E3A1B51A7AF2.d.A8C373EF0BEDAADB93CD2FF3161D84DB.e.78/text HTTP/1.1" 200 0
+2026-02-10 11:14:14 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":"Add"} | headers=HTTPHeaderDict({'Content-Length': '15', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-10 11:14:14 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-10 11:14:14 - selenium.webdriver.remote.remote_connection - DEBUG - GET http://localhost:54252/session/e13da4569c343d2a3ae421d6db03c30a/element/f.3B190AA57EB9B9684413E3A1B51A7AF2.d.A8C373EF0BEDAADB93CD2FF3161D84DB.e.83/text {}
+2026-02-10 11:14:14 - urllib3.connectionpool - DEBUG - http://localhost:54252 "GET /session/e13da4569c343d2a3ae421d6db03c30a/element/f.3B190AA57EB9B9684413E3A1B51A7AF2.d.A8C373EF0BEDAADB93CD2FF3161D84DB.e.83/text HTTP/1.1" 200 0
+2026-02-10 11:14:14 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":"Add"} | headers=HTTPHeaderDict({'Content-Length': '15', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-10 11:14:14 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-10 11:14:14 - selenium.webdriver.remote.remote_connection - DEBUG - GET http://localhost:54252/session/e13da4569c343d2a3ae421d6db03c30a/element/f.3B190AA57EB9B9684413E3A1B51A7AF2.d.A8C373EF0BEDAADB93CD2FF3161D84DB.e.88/text {}
+2026-02-10 11:14:14 - urllib3.connectionpool - DEBUG - http://localhost:54252 "GET /session/e13da4569c343d2a3ae421d6db03c30a/element/f.3B190AA57EB9B9684413E3A1B51A7AF2.d.A8C373EF0BEDAADB93CD2FF3161D84DB.e.88/text HTTP/1.1" 200 0
+2026-02-10 11:14:14 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":"Add"} | headers=HTTPHeaderDict({'Content-Length': '15', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-10 11:14:14 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-10 11:14:14 - selenium.webdriver.remote.remote_connection - DEBUG - GET http://localhost:54252/session/e13da4569c343d2a3ae421d6db03c30a/element/f.3B190AA57EB9B9684413E3A1B51A7AF2.d.A8C373EF0BEDAADB93CD2FF3161D84DB.e.93/text {}
+2026-02-10 11:14:14 - urllib3.connectionpool - DEBUG - http://localhost:54252 "GET /session/e13da4569c343d2a3ae421d6db03c30a/element/f.3B190AA57EB9B9684413E3A1B51A7AF2.d.A8C373EF0BEDAADB93CD2FF3161D84DB.e.93/text HTTP/1.1" 200 0
+2026-02-10 11:14:14 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":"Add"} | headers=HTTPHeaderDict({'Content-Length': '15', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-10 11:14:14 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-10 11:14:14 - selenium.webdriver.remote.remote_connection - DEBUG - GET http://localhost:54252/session/e13da4569c343d2a3ae421d6db03c30a/element/f.3B190AA57EB9B9684413E3A1B51A7AF2.d.A8C373EF0BEDAADB93CD2FF3161D84DB.e.95/text {}
+2026-02-10 11:14:14 - urllib3.connectionpool - DEBUG - http://localhost:54252 "GET /session/e13da4569c343d2a3ae421d6db03c30a/element/f.3B190AA57EB9B9684413E3A1B51A7AF2.d.A8C373EF0BEDAADB93CD2FF3161D84DB.e.95/text HTTP/1.1" 200 0
+2026-02-10 11:14:14 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":"Add"} | headers=HTTPHeaderDict({'Content-Length': '15', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-10 11:14:14 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-10 11:14:14 - selenium.webdriver.remote.remote_connection - DEBUG - GET http://localhost:54252/session/e13da4569c343d2a3ae421d6db03c30a/element/f.3B190AA57EB9B9684413E3A1B51A7AF2.d.A8C373EF0BEDAADB93CD2FF3161D84DB.e.100/text {}
+2026-02-10 11:14:14 - urllib3.connectionpool - DEBUG - http://localhost:54252 "GET /session/e13da4569c343d2a3ae421d6db03c30a/element/f.3B190AA57EB9B9684413E3A1B51A7AF2.d.A8C373EF0BEDAADB93CD2FF3161D84DB.e.100/text HTTP/1.1" 200 0
+2026-02-10 11:14:14 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":"Add"} | headers=HTTPHeaderDict({'Content-Length': '15', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-10 11:14:14 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-10 11:14:14 - selenium.webdriver.remote.remote_connection - DEBUG - GET http://localhost:54252/session/e13da4569c343d2a3ae421d6db03c30a/element/f.3B190AA57EB9B9684413E3A1B51A7AF2.d.A8C373EF0BEDAADB93CD2FF3161D84DB.e.101/text {}
+2026-02-10 11:14:14 - urllib3.connectionpool - DEBUG - http://localhost:54252 "GET /session/e13da4569c343d2a3ae421d6db03c30a/element/f.3B190AA57EB9B9684413E3A1B51A7AF2.d.A8C373EF0BEDAADB93CD2FF3161D84DB.e.101/text HTTP/1.1" 200 0
+2026-02-10 11:14:14 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":"Add"} | headers=HTTPHeaderDict({'Content-Length': '15', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-10 11:14:14 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-10 11:14:14 - selenium.webdriver.remote.remote_connection - DEBUG - GET http://localhost:54252/session/e13da4569c343d2a3ae421d6db03c30a/element/f.3B190AA57EB9B9684413E3A1B51A7AF2.d.A8C373EF0BEDAADB93CD2FF3161D84DB.e.102/text {}
+2026-02-10 11:14:14 - urllib3.connectionpool - DEBUG - http://localhost:54252 "GET /session/e13da4569c343d2a3ae421d6db03c30a/element/f.3B190AA57EB9B9684413E3A1B51A7AF2.d.A8C373EF0BEDAADB93CD2FF3161D84DB.e.102/text HTTP/1.1" 200 0
+2026-02-10 11:14:14 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":"Add"} | headers=HTTPHeaderDict({'Content-Length': '15', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-10 11:14:14 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-10 11:14:14 - selenium.webdriver.remote.remote_connection - DEBUG - GET http://localhost:54252/session/e13da4569c343d2a3ae421d6db03c30a/element/f.3B190AA57EB9B9684413E3A1B51A7AF2.d.A8C373EF0BEDAADB93CD2FF3161D84DB.e.103/text {}
+2026-02-10 11:14:14 - urllib3.connectionpool - DEBUG - http://localhost:54252 "GET /session/e13da4569c343d2a3ae421d6db03c30a/element/f.3B190AA57EB9B9684413E3A1B51A7AF2.d.A8C373EF0BEDAADB93CD2FF3161D84DB.e.103/text HTTP/1.1" 200 0
+2026-02-10 11:14:14 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":"Add"} | headers=HTTPHeaderDict({'Content-Length': '15', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-10 11:14:14 - sel
+
+[Message truncated - exceeded 50,000 character limit]
+Show less
+I see the issue. The accordion expanded but the STEM indicator is not immediately visible - it's probably further down in the list (the accordion shows 13 results but only displays a few at first). We need to scroll down within the accordion to find it. Looking at the log, after the accordion click, it can't find the STEM text.
+
+Let me fix Step 5 to scroll and find the STEM indicator:
+
+Edit D:\Projects\SIMBA-RUNBOOKS\STEMGRADS_Runbook\scraper.py
+Added 30 lines
+
+
+
+
+
+This session is being continued from a previous conversation that ran out of context. The summary below covers the earlier portion of the conversation.
+
+Summary:
+1. Primary Request and Intent:
+   The user requested creation of a STEMGRADS runbook pipeline to scrape UNESCO STEM graduates data from http://data.uis.unesco.org/. The pipeline should:
+   - Follow the architecture of an existing JGBH_JMOF_BH_Runbook
+   - Handle 108 country mappings with codes (STEMGRADS.XXX.A format)
+   - Preserve zeros as valid data values (explicitly emphasized by user)
+   - Dynamically read year range from website slider (not hardcoded)
+   - Run with visible browser for debugging (HEADLESS_MODE = False)
+   - Update master data file and generate output files (DATA XLS, META XLS, ZIP)
+
+2. Key Technical Concepts:
+   - Selenium web scraping with undetected_chromedriver
+   - Windows Registry access (winreg) for Chrome version detection
+   - MUI/Material-UI React components (sliders, accordions, inputs)
+   - Pandas DataFrame manipulation for wide-format data transformation
+   - Country code mapping (108 countries to STEMGRADS.XXX.A format)
+   - Master data structure: Row 1=codes, Row 2=descriptions, Row 3+=year data
+   - Dynamic year range extraction from HTML slider attributes (min/max)
+
+3. Files and Code Sections:
+
+   - **D:\Projects\SIMBA-RUNBOOKS\STEMGRADS_Runbook\config.py**
+     - Central configuration with URLs, 108 country mappings, paths
+     - Time range is now dynamic (removed hardcoded START_YEAR)
+     - HEADLESS_MODE = False for debugging
+     ```python
+     # TIME RANGE CONFIGURATION
+     # Time range is dynamically read from the website slider
+     # The slider provides: min="XXXX" max="XXXX" which changes over time
+     # No hardcoded years needed - scraper reads from slider attributes
+     ```
+
+   - **D:\Projects\SIMBA-RUNBOOKS\STEMGRADS_Runbook\scraper.py**
+     - Main scraper with navigate_to_stem_indicator() method rewritten multiple times
+     - Latest update adds scrolling and multiple search attempts for STEM indicator:
+     ```python
+     # STEP 5: Find STEM indicator row and click "Add" button
+     self.logger.info("STEP 5: Finding STEM indicator and clicking 'Add' button...")
+     stem_keywords = [
+         "Science, Technology, Engineering and Mathematics",
+         "STEM programmes",
+     ]
+     add_clicked = False
+     time.sleep(2)
+     
+     for attempt in range(5):  # Try scrolling multiple times
+         self.logger.info(f"Search attempt {attempt + 1} for STEM indicator...")
+         for keyword in stem_keywords:
+             # Find elements, scroll into view, find Add button in parent row
+             # If not found, scroll accordion content down 300px and retry
+     ```
+
+   - **D:\Projects\SIMBA-RUNBOOKS\STEMGRADS_Runbook\orchestrator.py**
+     - Fixed print_configuration() to use dynamic year range
+     ```python
+     print(f"  Year Range: Dynamic (read from website slider)")
+     ```
+
+   - **D:\Projects\SIMBA-RUNBOOKS\STEMGRADS_Runbook\parser.py**
+     - Updated create_empty_master() to not use START_YEAR
+     ```python
+     def create_empty_master(self):
+         # Create DataFrame with just header rows
+         # Year rows will be added dynamically by update_master based on actual data
+         data = []
+         code_row = [''] + config.COLUMN_ORDER
+         data.append(code_row)
+         # No year rows - they will be added from actual scraped data
+     ```
+
+4. Errors and fixes:
+   - **AttributeError: module 'config' has no attribute 'START_YEAR'**:
+     - Fixed by removing START_YEAR references from orchestrator.py (print_configuration) and parser.py (create_empty_master)
+     - User wanted dynamic year reading from slider, not hardcoded values
+   
+   - **Navigation failures - couldn't find elements**:
+     - Initial scraper was written for wrong interface
+     - User provided HTML samples and screenshots showing MUI React interface
+     - Rewrote scraper multiple times based on user feedback
+   
+   - **STEM indicator not found after accordion expansion**:
+     - Log showed accordion clicked successfully but "Science, Technology, Engineering and Mathematics" text returned empty results
+     - Cause: STEM indicator is not immediately visible, needs scrolling within accordion (13 results displayed)
+     - Fix: Added scrolling logic with 5 retry attempts and multiple fallback methods
+
+5. Problem Solving:
+   - Discovered correct navigation flow by reading project_information images (image1-12.png)
+   - User simplified approach by saying "just click the graduates from the side bar its easier" instead of using search
+   - Successfully navigated to: Browse data → Other Policy Relevant Indicators - Education → Graduates → Distribution accordion
+   - Current blocker: STEM indicator text not visible/findable after accordion expansion - just added scrolling fix
+
+6. All user messages:
+   - "alot of errors... we are supposed to click the Browse data first navigation"
+   - "read this information.txt first give me step by step what the scrapper is supposed to doo cause its alot"
+   - User provided extensive HTML samples for search box, Graduates folder, accordion structure
+   - "just click the graduates from the side bar its easier"
+   - "we failed" (with full log output showing Step 5 failure - STEM indicator not found)
+
+7. Pending Tasks:
+   - Test the updated scraper with scrolling logic for STEM indicator
+   - Complete the full scraping workflow once STEM indicator is successfully added
+   - Verify time range slider manipulation works
+   - Verify CSV download completes
+   - Test parser with downloaded CSV
+   - Test file generation
+
+8. Current Work:
+   The scraper was running and successfully completed Steps 1-4:
+   - ✅ Step 1: Clicked 'Browse data' link
+   - ✅ Step 2: Clicked 'Other Policy Relevant Indicators - Education'
+   - ✅ Step 3: Clicked 'Graduates' from sidebar
+   - ✅ Step 4: Clicked 'Distribution of graduates by field of study' accordion
+   - ❌ Step 5: Failed - Could not find "Science, Technology, Engineering and Mathematics" text
+   
+   The log showed: `Found 0 elements with 'Science, Technology, Engineering and Mathematics'`
+   
+   I just updated Step 5 in scraper.py to add scrolling within the accordion and multiple retry attempts:
+   ```python
+   for attempt in range(5):  # Try scrolling multiple times
+       # Search for keywords
+       # If not found, scroll accordion content:
+       accordion_content = self.driver.find_element(By.CSS_SELECTOR, ".MuiAccordionDetails-root")
+       self.driver.execute_script("arguments[0].scrollTop += 300;", accordion_content)
+   ```
+
+9. Optional Next Step:
+   User should run `python orchestrator.py` again to test if the updated scrolling logic can find and click the STEM indicator's Add button. The user's last message was "we failed" with the error log, and I responded by updating the Step 5 code to add scrolling capabilities.
+
+If you need specific details from before compaction (like exact code snippets, error messages, or content you generated), read the full transcript at: C:\Users\Mark Castro\.claude\projects\d--Projects-SIMBA-RUNBOOKS-STEMGRADS-Runbook\52c0ba1f-98a0-41cd-a5d3-75687f4a5534.jsonl
+Please continue the conversation from where we left it off without asking the user any further questions. Continue with the last task that you were asked to work on.

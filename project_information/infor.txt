@@ -1,0 +1,36 @@
+STEMGRADS Scraper Navigation Steps
+Step 1: Visit Homepage
+URL: http://data.uis.unesco.org/
+Wait for page to load
+Step 2: Click "Browse data"
+Click the "Browse data" link in the top navigation
+Goes to: /browser
+Step 3: Click "Education" category
+On the browser page, click "Education" to expand it
+Then click "Other Policy Relevant Indicators - Education"
+
+we are supposed to search 
+ Percentage of graduates by field of education (tertiary education) 
+
+
+Step 4: Click "Graduates" in left sidebar
+In the left sidebar, click "Graduates"
+OR search for: "Percentage of graduates by field of education"
+Step 5: Expand "Distribution of graduates by field of study"
+Click to expand this section (shows 13 results)
+Step 6: Select the STEM indicator
+Find and click: "Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%)"
+You'll see "Indicator added to the selection"
+Step 7: Click "View data"
+After indicator is selected, click "View data" link
+Step 8: Set Time Range
+Expand "Time range" section in left sidebar
+Drag slider to full range (min to max years)
+Step 9: Download CSV
+Click "Download filtered data" button (bottom right)
+Select "CSV" format
+Click "Download"
+Step 10: Process downloaded file
+CSV has columns: indicatorId, geoUnit, year, value, qualifier, magnitude
+Parse and update master data
+The current scraper is missing most of these steps. Want me to rewrite it to follow this exact flow?
