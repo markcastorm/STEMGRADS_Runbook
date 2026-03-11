@@ -254,121 +254,78 @@ class STEMGRADSParser:
 
     def update_master(self, parsed_df):
         """
-        Update master CSV with new data.
+        Rebuild master CSV entirely from source data.
+
+        The source is the single source of truth.  On every run the master
+        data rows are wiped and rebuilt so that:
+          - Removed data points in the source are removed from the master.
+          - Updated values are reflected immediately.
+          - Decimal precision is preserved exactly as-is from the source.
+          - Only years that exist in the source are present (no empty rows).
+          - Zeros are kept as valid data.
 
         Args:
             parsed_df: DataFrame with Country, Year, Value columns
 
         Returns:
-            Updated master DataFrame
+            Rebuilt master DataFrame
         """
 
         self.logger.info("=" * 70)
-        self.logger.info("UPDATING MASTER DATA")
+        self.logger.info("REBUILDING MASTER DATA FROM SOURCE (full override)")
         self.logger.info("=" * 70)
 
         # Transform new data to wide format
         new_wide = self.transform_to_wide_format(parsed_df)
 
         if new_wide is None or new_wide.empty:
-            self.logger.error("No valid data to update")
+            self.logger.error("No valid data to rebuild")
             return None
 
-        # Load existing master
-        master_df = self.load_master_data()
+        # --- Build header rows ---
+        # Row 0: codes
+        code_row = [''] + list(config.COLUMN_ORDER)
+        # Row 1: descriptions
+        desc_row = ['']
+        for code in config.COLUMN_ORDER:
+            desc_row.append(config.CODE_TO_DESCRIPTION_MAP.get(code, ''))
 
-        if master_df is None:
-            # Create new master from scratch
-            self.logger.info("Creating new master file...")
-            master_df = self.create_empty_master()
+        num_cols = len(code_row)
 
-        # Extract existing data structure
-        # Row 0: codes, Row 1: descriptions, Row 2+: data
-        codes_row = master_df.iloc[0].tolist()
-        desc_row = master_df.iloc[1].tolist()
+        # --- Build data rows from source only ---
+        data_rows = []
+        total_values = 0
 
-        # Create a mapping of code to column index
-        code_to_col = {}
-        for idx, code in enumerate(codes_row):
-            if code and str(code).startswith('STEMGRADS.'):
-                code_to_col[code] = idx
+        for year in sorted(new_wide.index):
+            year_int = int(year)
+            row = [str(year_int)]  # first column is the year
+            for code in config.COLUMN_ORDER:
+                if code in new_wide.columns:
+                    val = new_wide.loc[year, code]
+                    if pd.notna(val):
+                        # Store the raw float so decimal precision is preserved
+                        row.append(val)
+                        total_values += 1
+                    else:
+                        row.append('')
+                else:
+                    row.append('')
+            data_rows.append(row)
 
-        # Extract existing year data (row 2 onwards)
-        existing_years = {}
-        for row_idx in range(2, len(master_df)):
-            year_val = master_df.iloc[row_idx, 0]
-            try:
-                year = int(float(year_val))
-                existing_years[year] = row_idx
-            except (ValueError, TypeError):
-                continue
-
-        # Track updates
-        new_values = 0
-        updated_values = 0
-
-        # Update master with new data
-        for year in new_wide.index:
-            year = int(year)
-
-            if year not in existing_years:
-                # Add new year row
-                new_row = [year] + ['' for _ in range(len(codes_row) - 1)]
-                new_row_df = pd.DataFrame([new_row])
-                master_df = pd.concat([master_df, new_row_df], ignore_index=True)
-                existing_years[year] = len(master_df) - 1
-                self.logger.info(f"Added new year: {year}")
-
-            row_idx = existing_years[year]
-
-            # Update each country's value for this year
-            for code in new_wide.columns:
-                if code in code_to_col:
-                    col_idx = code_to_col[code]
-                    new_value = new_wide.loc[year, code]
-
-                    # Get existing value
-                    existing_value = master_df.iloc[row_idx, col_idx]
-
-                    # Check if we should update
-                    # Important: Zero is a valid value, don't skip it
-                    if pd.notna(new_value):
-                        existing_is_empty = pd.isna(existing_value) or str(existing_value).strip() == ''
-
-                        if existing_is_empty:
-                            master_df.iloc[row_idx, col_idx] = new_value
-                            new_values += 1
-                        else:
-                            # Numeric comparison avoids float string representation issues
-                            # (e.g. '0.0' != '0', or trailing-digit differences)
-                            try:
-                                values_equal = float(existing_value) == float(new_value)
-                            except (ValueError, TypeError):
-                                values_equal = str(existing_value) == str(new_value)
-
-                            if not values_equal:
-                                master_df.iloc[row_idx, col_idx] = new_value
-                                updated_values += 1
-
-        # Sort by year (rows 2 onwards)
-        header_rows = master_df.iloc[:2].copy()
-        data_rows = master_df.iloc[2:].copy()
-
-        # Sort data rows by first column (year)
-        data_rows = data_rows.sort_values(by=0, key=lambda x: pd.to_numeric(x, errors='coerce'))
-
-        # Combine back
-        master_df = pd.concat([header_rows, data_rows], ignore_index=True)
+        # Assemble full master
+        all_rows = [code_row, desc_row] + data_rows
+        master_df = pd.DataFrame(all_rows)
 
         self.logger.info("=" * 70)
-        self.logger.info("UPDATE SUMMARY")
+        self.logger.info("REBUILD SUMMARY")
         self.logger.info("=" * 70)
-        self.logger.info(f"New values added: {new_values}")
-        self.logger.info(f"Values updated: {updated_values}")
+        self.logger.info(f"Years in master: {len(data_rows)} ({sorted(new_wide.index)[0]} - {sorted(new_wide.index)[-1]})")
+        self.logger.info(f"Countries tracked: {len(config.COLUMN_ORDER)}")
+        self.logger.info(f"Total data values: {total_values}")
         self.logger.info(f"Total rows in master: {len(master_df)}")
         self.logger.info("=" * 70)
 
-        # Save updated master
+        # Save rebuilt master
         self.save_master_data(master_df)
 
         return master_df

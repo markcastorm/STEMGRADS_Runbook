@@ -237,7 +237,7 @@ LOG_FILE_PATTERN = 'stemgrads_{timestamp}.log'
 # BROWSER CONFIGURATION
 # =============================================================================
 
-HEADLESS_MODE = False  # Set to False for debugging - see browser actions
+HEADLESS_MODE = True  # Set to False for debugging - see browser actions
 DEBUG_MODE = True
 WAIT_TIMEOUT = 60
 PAGE_LOAD_DELAY = 5

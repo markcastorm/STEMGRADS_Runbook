@@ -77,24 +77,39 @@ class STEMGRADSScraper:
         }
         options.add_experimental_option('prefs', prefs)
 
+        # GPU/stability flags for headless mode
         if config.HEADLESS_MODE:
-            options.add_argument('--headless=new')
+            options.add_argument('--disable-gpu')
+            options.add_argument('--disable-software-rasterizer')
+            self.logger.info("Running in headless mode")
 
         options.add_argument('--window-size=1920,1080')
-        options.add_argument('--disable-gpu')
         options.add_argument('--no-sandbox')
-        options.add_argument('--start-maximized')
+        options.add_argument('--disable-dev-shm-usage')
 
-        # Use detected Chrome version for matching driver
+        # Use UC's native headless parameter (NOT --headless=new arg)
+        # UC applies extra anti-detection patches when headless=True
         if chrome_version:
             self.logger.info(f"Using Chrome version {chrome_version} for driver")
-            self.driver = uc.Chrome(options=options, version_main=chrome_version)
+            self.driver = uc.Chrome(
+                options=options,
+                version_main=chrome_version,
+                headless=config.HEADLESS_MODE
+            )
         else:
             self.logger.info("Using automatic version detection")
-            self.driver = uc.Chrome(options=options)
+            self.driver = uc.Chrome(
+                options=options,
+                headless=config.HEADLESS_MODE
+            )
 
         self.driver.set_page_load_timeout(config.WAIT_TIMEOUT)
-        self.driver.maximize_window()
+
+        # In headless mode, maximize_window() returns 800x600 — use set_window_size instead
+        if config.HEADLESS_MODE:
+            self.driver.set_window_size(1920, 1080)
+        else:
+            self.driver.maximize_window()
 
         self.logger.info("Chrome driver initialized")
         self.logger.info(f"Download directory: {download_path}")
@@ -189,7 +204,11 @@ class STEMGRADSScraper:
                 try:
                     elements = self.driver.find_elements(*selector)
                     if elements:
-                        elements[0].click()
+                        try:
+                            elements[0].click()
+                        except Exception:
+                            # Headless: element found but not interactable — use JS click
+                            self.driver.execute_script("arguments[0].click();", elements[0])
                         self.logger.info("Clicked 'Browse data' link")
                         browse_clicked = True
                         time.sleep(4)
@@ -200,7 +219,7 @@ class STEMGRADSScraper:
             if not browse_clicked:
                 self.logger.warning("Could not find 'Browse data' link, navigating directly...")
                 self.driver.get("https://databrowser.uis.unesco.org/browser")
-                time.sleep(4)
+                time.sleep(8)  # React SPA needs time to hydrate in headless
 
             # ============================================================
             # STEP 2: Click "Education" then "Other Policy Relevant Indicators"
@@ -217,8 +236,15 @@ class STEMGRADSScraper:
                 try:
                     elements = self.driver.find_elements(*selector)
                     for elem in elements:
-                        if elem.is_displayed() and elem.text.strip() == 'Education':
-                            elem.click()
+                        try:
+                            text = elem.text.strip() if elem.text else ''
+                        except Exception:
+                            text = self.driver.execute_script("return arguments[0].textContent;", elem) or ''
+                        if 'Education' in text:
+                            try:
+                                elem.click()
+                            except Exception:
+                                self.driver.execute_script("arguments[0].click();", elem)
                             self.logger.info("Clicked 'Education' category")
                             time.sleep(2)
                             break
@@ -237,7 +263,10 @@ class STEMGRADSScraper:
                 try:
                     elements = self.driver.find_elements(*selector)
                     if elements:
-                        elements[0].click()
+                        try:
+                            elements[0].click()
+                        except Exception:
+                            self.driver.execute_script("arguments[0].click();", elements[0])
                         self.logger.info("Clicked 'Other Policy Relevant Indicators - Education'")
                         time.sleep(3)
                         break
@@ -262,8 +291,15 @@ class STEMGRADSScraper:
                 try:
                     elements = self.driver.find_elements(*selector)
                     for elem in elements:
-                        if elem.is_displayed() and 'Graduates' in elem.text:
-                            elem.click()
+                        try:
+                            text = elem.text if elem.text else ''
+                        except Exception:
+                            text = self.driver.execute_script("return arguments[0].textContent;", elem) or ''
+                        if 'Graduates' in text:
+                            try:
+                                elem.click()
+                            except Exception:
+                                self.driver.execute_script("arguments[0].click();", elem)
                             self.logger.info("Clicked 'Graduates' from sidebar")
                             graduates_clicked = True
                             time.sleep(3)
@@ -514,8 +550,8 @@ class STEMGRADSScraper:
 
     def set_time_range_by_slider(self):
         """
-        Set the time range by dragging the slider thumbs to both ends.
-        Reads min/max dynamically from the slider's range input attributes.
+        Set the time range to full extent using JavaScript on the range inputs.
+        Uses React's native input value setter to trigger proper state updates.
         """
 
         self.logger.info("Setting time range using slider...")
@@ -523,66 +559,51 @@ class STEMGRADSScraper:
         try:
             time.sleep(2)
 
-            # First, read the available range from the slider's range inputs
-            # HTML: <input type="range" min="1998" max="2025" ...>
+            # Find range inputs: <input type="range" min="1998" max="2025" aria-label="Year range">
             range_inputs = self.driver.find_elements(By.CSS_SELECTOR, "input[type='range'][aria-label='Year range']")
 
             if not range_inputs:
-                # Fallback selector
                 range_inputs = self.driver.find_elements(By.CSS_SELECTOR, ".MuiSlider-root input[type='range']")
 
-            min_year = None
-            max_year = None
+            if len(range_inputs) < 2:
+                self.logger.warning(f"Expected 2 range inputs, found {len(range_inputs)}")
+                return False
 
-            if range_inputs:
-                # Get min/max from the range input attributes
-                min_year = range_inputs[0].get_attribute('min')
-                max_year = range_inputs[0].get_attribute('max')
-                self.logger.info(f"Slider range from attributes: {min_year} - {max_year}")
+            min_year = range_inputs[0].get_attribute('min')
+            max_year = range_inputs[0].get_attribute('max')
+            self.logger.info(f"Slider range from attributes: {min_year} - {max_year}")
 
-            # Find the slider thumbs to drag
-            slider_thumbs = self.driver.find_elements(By.CSS_SELECTOR, ".MuiSlider-thumb")
+            # Use React's native input value setter to programmatically set slider values
+            # This triggers React's onChange handler properly
+            result = self.driver.execute_script("""
+                var inputs = document.querySelectorAll("input[type='range'][aria-label='Year range']");
+                if (inputs.length < 2) return 'not_enough_inputs';
 
-            if len(slider_thumbs) >= 2:
-                self.logger.info(f"Found {len(slider_thumbs)} slider thumbs")
+                var nativeInputValueSetter = Object.getOwnPropertyDescriptor(
+                    window.HTMLInputElement.prototype, 'value').set;
 
-                # Get the slider track to calculate drag distance
-                slider_root = self.driver.find_element(By.CSS_SELECTOR, ".MuiSlider-root")
-                slider_rect = slider_root.rect
-                slider_width = slider_rect['width']
+                // Set first input (start year) to min
+                nativeInputValueSetter.call(inputs[0], arguments[0]);
+                inputs[0].dispatchEvent(new Event('input', { bubbles: true }));
+                inputs[0].dispatchEvent(new Event('change', { bubbles: true }));
 
-                self.logger.info(f"Slider width: {slider_width}px")
+                // Set second input (end year) to max
+                nativeInputValueSetter.call(inputs[1], arguments[1]);
+                inputs[1].dispatchEvent(new Event('input', { bubbles: true }));
+                inputs[1].dispatchEvent(new Event('change', { bubbles: true }));
 
-                # Drag first thumb (start year) to the far LEFT
-                left_thumb = slider_thumbs[0]
-                actions = ActionChains(self.driver)
-                actions.click_and_hold(left_thumb)
-                actions.move_by_offset(-int(slider_width), 0)  # Drag to far left
-                actions.release()
-                actions.perform()
+                return 'ok';
+            """, min_year, max_year)
+
+            if result == 'ok':
                 time.sleep(1)
-                self.logger.info("Dragged LEFT thumb to minimum (start year)")
-
-                # Drag second thumb (end year) to the far RIGHT
-                right_thumb = slider_thumbs[1]
-                actions = ActionChains(self.driver)
-                actions.click_and_hold(right_thumb)
-                actions.move_by_offset(int(slider_width), 0)  # Drag to far right
-                actions.release()
-                actions.perform()
-                time.sleep(1)
-                self.logger.info("Dragged RIGHT thumb to maximum (end year)")
-
-                # Verify the range was set by checking the range inputs again
-                range_inputs = self.driver.find_elements(By.CSS_SELECTOR, "input[type='range'][aria-label='Year range']")
-                if range_inputs:
-                    current_min = range_inputs[0].get_attribute('value')
-                    current_max = range_inputs[-1].get_attribute('value') if len(range_inputs) > 1 else range_inputs[0].get_attribute('max')
-                    self.logger.info(f"Time range now set to: {current_min} - {current_max}")
-
+                # Verify
+                current_min = range_inputs[0].get_attribute('value')
+                current_max = range_inputs[-1].get_attribute('value')
+                self.logger.info(f"Time range set to: {current_min} - {current_max}")
                 return True
 
-            self.logger.warning("Could not find slider thumbs")
+            self.logger.warning(f"JS slider set returned: {result}")
             return False
 
         except Exception as e:
@@ -892,9 +913,10 @@ class STEMGRADSScraper:
             if not self.navigate_to_page(config.BASE_URL):
                 return None
 
-            # Wait for page to fully load
-            self.logger.info("Waiting for page to fully load...")
-            time.sleep(8)
+            # Wait for React SPA to fully hydrate (needs longer in headless)
+            wait_time = 12 if config.HEADLESS_MODE else 8
+            self.logger.info(f"Waiting for page to fully load ({wait_time}s)...")
+            time.sleep(wait_time)
 
             # Navigate to STEM indicator (may already be selected)
             self.navigate_to_stem_indicator()
